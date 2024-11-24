@@ -1,0 +1,61 @@
+site_name: My site
+site_url: https://mydomain.org/mysite
+site_author: Santosh Kumar Sah
+theme:
+  name: material
+  palette: 
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+
+
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.tracking
+    - content.tabs.link
+    - header.autohide
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: pink
+    - scheme: slate
+      primary: deep purple
+      accent: pink
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+  icon:
+    repo: fontawesome/brands/github
+repo_url: https://github.com/sntoshsah
+
+nav:
+  - Home: index.md
+  # - About Me: about.md
+  - Projects:
+      - AI Engineer: projects/ai.md
+      - Data Science: projects/data_science.md
+  - Learning Resources:
+      - Learning_resources/Python/Basic_Python.ipynb
+  - Blog: blog.md
+  - Contact: contact.md
+plugins:
+  - search
+  - awesome-pages
+  - mkdocs-jupyter
+
+
+
+
+
+
+
