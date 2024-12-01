@@ -1,5 +1,5 @@
-site_name: My site
-site_url: https://mydomain.org/mysite
+site_name: Data Science and ML
+site_url: https://mydomain.org
 site_author: Santosh Kumar Sah
 theme:
   name: material
@@ -24,16 +24,21 @@ theme:
     - navigation.tracking
     - content.tabs.link
     - header.autohide
-  palette:
-    - scheme: default
-      primary: deep purple
-      accent: pink
-    - scheme: slate
-      primary: deep purple
-      accent: pink
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to dark mode
+    - content.code.annotate     # Enable annotated code
+    - content.code.copy         # Add a copy button to code blocks
+    - content.code.tabs         # Enable interactive tabs for code blocks
+    - content.code.execute      # Enable interactive Python execution
+
+  # palette:
+  #   - scheme: default
+  #     primary: deep purple
+  #     accent: pink
+  #   - scheme: slate
+  #     primary: deep purple
+  #     accent: pink
+  #     toggle:
+  #       icon: material/toggle-switch
+  #       name: Switch to dark mode
   icon:
     repo: fontawesome/brands/github
 repo_url: https://github.com/sntoshsah
@@ -46,12 +51,20 @@ nav:
       - Data Science: projects/data_science.md
   - Learning Resources:
       - Learning_resources/Python/Basic_Python.ipynb
+      - Learning_resources/Python/Python_basics.md
   - Blog: blog.md
   - Contact: contact.md
+  - Test:
+      - Learning_resources/Python/test.md
+
 plugins:
   - search
   - awesome-pages
   - mkdocs-jupyter
+  - markdown-exec
+markdown_extensions:
+- pymdownx.superfences
+
 
 
 
