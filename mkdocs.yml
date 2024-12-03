@@ -50,7 +50,6 @@ nav:
       - AI Engineer: projects/ai.md
       - Data Science: projects/data_science.md
   - Learning Resources:
-      - Learning_resources/Python/Basic_Python.ipynb
       - Learning_resources/Python/Python_basics.md
   - Blog: blog.md
   - Contact: contact.md
