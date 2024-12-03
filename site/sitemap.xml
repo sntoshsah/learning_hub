@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://mydomain.org/</loc>
+         <lastmod>2024-12-02</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/blog/</loc>
+         <lastmod>2024-12-02</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/contact/</loc>
+         <lastmod>2024-12-02</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/Learning_resources/Python/Python_basics/</loc>
+         <lastmod>2024-12-02</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/projects/ai/</loc>
+         <lastmod>2024-12-02</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/projects/data_science/</loc>
+         <lastmod>2024-12-02</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/static/about/</loc>
+         <lastmod>2024-12-02</lastmod>
+    </url>
+</urlset>
