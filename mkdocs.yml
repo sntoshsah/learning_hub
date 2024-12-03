@@ -53,8 +53,6 @@ nav:
       - Learning_resources/Python/Python_basics.md
   - Blog: blog.md
   - Contact: contact.md
-  - Test:
-      - Learning_resources/Python/test.md
 
 plugins:
   - search
