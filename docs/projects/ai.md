@@ -8,4 +8,3 @@
 - Designed and optimized city-wide surveillance systems.
 - Tools: OpenCV, FastAPI.
 
----
