@@ -52,7 +52,7 @@ nav:
   - Learning Resources:
     - Python Programming Concepts:
       - Learning_resources/Python/Python_Syntax.md
-      - Learning_resources/Python/Python_basics.md
+      - Learning_resources/Python/Python_Basics.md
     - Machine Learning Algorithms and Concepts:
       - Learning_resources/Machine Learning/ML_basics.md
       - Learning_resources/Machine Learning/Regression.md
