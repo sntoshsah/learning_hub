@@ -50,8 +50,13 @@ nav:
       - AI Engineer: projects/ai.md
       - Data Science: projects/data_science.md
   - Learning Resources:
+    - Python Programming Concepts:
       - Learning_resources/Python/Python_Syntax.md
-      - Learning_resources/Python/Python_Basics.md
+      - Learning_resources/Python/Python_basics.md
+    - Machine Learning Algorithms and Concepts:
+      - Learning_resources/Machine Learning/ML_basics.md
+      - Learning_resources/Machine Learning/Regression.md
+      - Learning_resources/Machine Learning/classification.md
 
   - Blog: blog.md
   - Contact: contact.md
