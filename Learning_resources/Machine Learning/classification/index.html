@@ -16,7 +16,7 @@
         <link rel="prev" href="../Regression/">
       
       
-        <link rel="next" href="../../../blog/">
+        <link rel="next" href="../Clustering/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Classification classifies the data into their respective classes - Data Science and ML</title>
+        <title>Classification - Data Science and ML</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#classification-classifies-the-data-into-their-respective-classes" class="md-skip">
+        <a href="#classification" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Classification classifies the data into their respective classes
+              Classification
             
           </span>
         </div>
@@ -559,7 +559,7 @@
         
   
   <span class="md-ellipsis">
-    Regression is simply the prediction of future outcomes of continuous data.
+    Regression Analysis
   </span>
   
 
@@ -585,16 +585,358 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Classification
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Classification classifies the data into their respective classes
+    Classification
   </span>
   
 
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mathematical-formulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mathematical Formulation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-classification-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Classification Algorithms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Classification Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-logistic-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Logistic Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Logistic Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mathematical-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mathematical Formula
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-decision-tree-classifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Decision Tree Classifier
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Decision Tree Classifier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#splitting-criterion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Splitting Criterion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-random-forest-classifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Random Forest Classifier
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Random Forest Classifier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prediction-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prediction Formula
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-support-vector-machine-svm" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Support Vector Machine (SVM)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Support Vector Machine (SVM)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mathematical-formulation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mathematical Formulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kernel-trick" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kernel Trick
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-k-nearest-neighbors-knn" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. K-Nearest Neighbors (KNN)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. K-Nearest Neighbors (KNN)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decision-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision Rule
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-naive-bayes-classifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Naive Bayes Classifier
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Naive Bayes Classifier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formula
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-neural-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Neural Networks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Neural Networks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formula_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formula
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-gradient-boosting-classifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Gradient Boosting Classifier
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Gradient Boosting Classifier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Rule
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Metrics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#confusion-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confusion Matrix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metrics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-the-right-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choosing the Right Algorithm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Clustering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unsupervised Machine Learning Algorithms
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -675,6 +1017,305 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mathematical-formulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mathematical Formulation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-classification-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Classification Algorithms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Classification Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-logistic-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Logistic Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Logistic Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mathematical-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mathematical Formula
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-decision-tree-classifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Decision Tree Classifier
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Decision Tree Classifier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#splitting-criterion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Splitting Criterion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-random-forest-classifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Random Forest Classifier
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Random Forest Classifier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prediction-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prediction Formula
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-support-vector-machine-svm" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Support Vector Machine (SVM)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Support Vector Machine (SVM)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mathematical-formulation_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mathematical Formulation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kernel-trick" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kernel Trick
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-k-nearest-neighbors-knn" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. K-Nearest Neighbors (KNN)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. K-Nearest Neighbors (KNN)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decision-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision Rule
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-naive-bayes-classifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Naive Bayes Classifier
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Naive Bayes Classifier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formula
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-neural-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Neural Networks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Neural Networks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formula_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formula
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-gradient-boosting-classifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Gradient Boosting Classifier
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Gradient Boosting Classifier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Rule
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Metrics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#confusion-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confusion Matrix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metrics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-the-right-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choosing the Right Algorithm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -691,7 +1332,199 @@
   
 
 
-<h1 id="classification-classifies-the-data-into-their-respective-classes">Classification classifies the data into their respective classes</h1>
+<h1 id="classification">Classification</h1>
+<p>Classification is a supervised learning task that involves predicting the category or class label of a given input. This task is foundational to many applications like spam detection, sentiment analysis, fraud detection, and image classification.</p>
+<hr />
+<h2 id="key-concepts">Key Concepts</h2>
+<h3 id="mathematical-formulation">Mathematical Formulation</h3>
+<p>Given a dataset:</p>
+<div class="arithmatex">\[
+D = \{(X_1, y_1), (X_2, y_2), \dots, (X_n, y_n)\}
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\( X_i \)</span> represents feature vectors.</li>
+<li><span class="arithmatex">\( y_i \)</span> is the class label (<span class="arithmatex">\( y_i \in \{C_1, C_2, \dots, C_k\} \)</span>).</li>
+</ul>
+<p>The objective is to learn a function <span class="arithmatex">\( f \)</span> such that:</p>
+<div class="arithmatex">\[
+f(X) = \hat{y}
+\]</div>
+<p>Where <span class="arithmatex">\( \hat{y} \)</span> is the predicted class label.</p>
+<hr />
+<h2 id="types-of-classification-algorithms">Types of Classification Algorithms</h2>
+<h3 id="1-logistic-regression">1. Logistic Regression</h3>
+<p>Logistic Regression predicts the probability of a binary class using the logistic (sigmoid) function.</p>
+<h4 id="mathematical-formula">Mathematical Formula</h4>
+<p>For binary classification (<span class="arithmatex">\( y \in \{0, 1\} \)</span>):</p>
+<div class="arithmatex">\[
+P(y=1|X) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X)}}
+\]</div>
+<p>Decision rule:</p>
+<div class="arithmatex">\[
+\hat{y} =
+\begin{cases}
+1 &amp; \text{if } P(y=1|X) \geq 0.5 \\
+0 &amp; \text{otherwise}
+\end{cases}
+\]</div>
+<hr />
+<h3 id="2-decision-tree-classifier">2. Decision Tree Classifier</h3>
+<p>Decision Trees split data based on feature conditions to predict class labels.</p>
+<h4 id="splitting-criterion">Splitting Criterion</h4>
+<p>Common measures:</p>
+<ul>
+<li><strong>Gini Index</strong>:</li>
+</ul>
+<div class="arithmatex">\[
+G = 1 - \sum_{i=1}^k p_i^2
+\]</div>
+<ul>
+<li><strong>Entropy</strong>:</li>
+</ul>
+<div class="arithmatex">\[
+H = -\sum_{i=1}^k p_i \log_2 p_i
+\]</div>
+<p>Where <span class="arithmatex">\( p_i \)</span> is the probability of class <span class="arithmatex">\( i \)</span>.</p>
+<hr />
+<h3 id="3-random-forest-classifier">3. Random Forest Classifier</h3>
+<p>Random Forest aggregates predictions from multiple decision trees.</p>
+<h4 id="prediction-formula">Prediction Formula</h4>
+<p>For classification:</p>
+<div class="arithmatex">\[
+\hat{y} = \text{Mode}(\{T_1(X), T_2(X), \dots, T_m(X)\})
+\]</div>
+<p>Where <span class="arithmatex">\( T_i(X) \)</span> is the prediction of the <span class="arithmatex">\( i \)</span>-th tree.</p>
+<hr />
+<h3 id="4-support-vector-machine-svm">4. Support Vector Machine (SVM)</h3>
+<p>SVM finds the hyperplane that best separates the classes with the largest margin.</p>
+<h4 id="mathematical-formulation_1">Mathematical Formulation</h4>
+<p>Given:</p>
+<ul>
+<li>Data points <span class="arithmatex">\( X_i \)</span></li>
+<li>Labels <span class="arithmatex">\( y_i \in \{-1, 1\} \)</span></li>
+</ul>
+<p>Objective:</p>
+<div class="arithmatex">\[
+\text{Maximize } \frac{2}{||w||}
+\]</div>
+<p>Subject to:</p>
+<div class="arithmatex">\[
+y_i (w \cdot X_i + b) \geq 1
+\]</div>
+<h4 id="kernel-trick">Kernel Trick</h4>
+<p>For non-linear data, SVM uses kernel functions:</p>
+<ul>
+<li>Linear: <span class="arithmatex">\( K(X, X') = X \cdot X' \)</span></li>
+<li>Polynomial: <span class="arithmatex">\( K(X, X') = (X \cdot X' + c)^d \)</span></li>
+<li>RBF: <span class="arithmatex">\( K(X, X') = e^{-\gamma ||X - X'||^2} \)</span></li>
+</ul>
+<hr />
+<h3 id="5-k-nearest-neighbors-knn">5. K-Nearest Neighbors (KNN)</h3>
+<p>KNN classifies data based on the majority vote of its <span class="arithmatex">\( k \)</span>-nearest neighbors.</p>
+<h4 id="decision-rule">Decision Rule</h4>
+<div class="arithmatex">\[
+\hat{y} = \text{Mode}(\{y_{i_1}, y_{i_2}, \dots, y_{i_k}\})
+\]</div>
+<p>Where <span class="arithmatex">\( y_{i_j} \)</span> are the labels of the nearest neighbors.</p>
+<hr />
+<h3 id="6-naive-bayes-classifier">6. Naive Bayes Classifier</h3>
+<p>Naive Bayes applies Bayes' theorem under the assumption of conditional independence.</p>
+<h4 id="formula">Formula</h4>
+<div class="arithmatex">\[
+P(y|X) \propto P(X|y)P(y)
+\]</div>
+<p>For features <span class="arithmatex">\( X = \{x_1, x_2, \dots, x_n\} \)</span>:
+[
+P(X|y) = \prod_{i=1}^n P(x_i|y)
+]</p>
+<hr />
+<h3 id="7-neural-networks">7. Neural Networks</h3>
+<p>Neural Networks use layers of interconnected neurons to model complex patterns.</p>
+<h4 id="formula_1">Formula</h4>
+<p>For a single neuron:</p>
+<div class="arithmatex">\[
+z = w \cdot X + b, \quad a = \sigma(z)
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\( z \)</span> is the weighted sum.</li>
+<li><span class="arithmatex">\( a \)</span> is the activation output.</li>
+<li><span class="arithmatex">\( \sigma \)</span> is the activation function (e.g., sigmoid, ReLU).</li>
+</ul>
+<hr />
+<h3 id="8-gradient-boosting-classifier">8. Gradient Boosting Classifier</h3>
+<p>Gradient Boosting builds an additive model by minimizing a loss function.</p>
+<h4 id="update-rule">Update Rule</h4>
+<div class="arithmatex">\[
+F_m(X) = F_{m-1}(X) + h_m(X)
+\]</div>
+<p>Where <span class="arithmatex">\( h_m(X) \)</span> is the weak learner (decision tree).</p>
+<hr />
+<h2 id="performance-metrics">Performance Metrics</h2>
+<h3 id="confusion-matrix">Confusion Matrix</h3>
+<p>A confusion matrix summarizes prediction results:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Predicted Positive</th>
+<th>Predicted Negative</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Actual Positive</strong></td>
+<td>True Positive (TP)</td>
+<td>False Negative (FN)</td>
+</tr>
+<tr>
+<td><strong>Actual Negative</strong></td>
+<td>False Positive (FP)</td>
+<td>True Negative (TN)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="metrics">Metrics</h3>
+<ul>
+<li><strong>Accuracy</strong>:</li>
+</ul>
+<div class="arithmatex">\[
+\text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
+\]</div>
+<ul>
+<li><strong>Precision</strong>:</li>
+</ul>
+<div class="arithmatex">\[
+\text{Precision} = \frac{TP}{TP + FP}
+\]</div>
+<ul>
+<li><strong>Recall</strong>:</li>
+</ul>
+<div class="arithmatex">\[
+\text{Recall} = \frac{TP}{TP + FN}
+\]</div>
+<ul>
+<li><strong>F1-Score</strong>:</li>
+</ul>
+<div class="arithmatex">\[
+\text{F1-Score} = 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}
+\]</div>
+<ul>
+<li><strong>ROC-AUC</strong>:</li>
+</ul>
+<p>Area under the ROC curve measures the model's ability to distinguish between classes.</p>
+<hr />
+<h2 id="choosing-the-right-algorithm">Choosing the Right Algorithm</h2>
+<ul>
+<li><strong>Linear Relationships</strong>: Logistic Regression, SVM (with linear kernel).</li>
+<li><strong>Non-linear Data</strong>: Decision Trees, Random Forest, SVM (with RBF kernel).</li>
+<li><strong>Text Data</strong>: Naive Bayes, Logistic Regression.</li>
+<li><strong>Large Datasets</strong>: Neural Networks, Gradient Boosting.</li>
+</ul>
+<hr />
+<h2 id="conclusion">Conclusion</h2>
+<p>Classification is a cornerstone of machine learning with algorithms ranging from simple models like Logistic Regression to complex ones like Gradient Boosting. Selecting the right model depends on the data and problem domain.</p>
 
 
 
@@ -746,6 +1579,10 @@
       <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
         <script src="../../../assets/_markdown_exec_pyodide.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

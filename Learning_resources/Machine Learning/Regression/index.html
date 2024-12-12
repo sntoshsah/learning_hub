@@ -24,7 +24,7 @@
     
     
       
-        <title>Regression is simply the prediction of future outcomes of continuous data. - Data Science and ML</title>
+        <title>Regression Analysis - Data Science and ML</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#regression-is-simply-the-prediction-of-future-outcomes-of-continuous-data" class="md-skip">
+        <a href="#regression-analysis" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Regression is simply the prediction of future outcomes of continuous data.
+              Regression Analysis
             
           </span>
         </div>
@@ -564,15 +564,531 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Regression Analysis
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Regression is simply the prediction of future outcomes of continuous data.
+    Regression Analysis
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mathematical-formulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mathematical Formulation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-regression-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Regression Algorithms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Regression Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-linear-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Linear Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Linear Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formula:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Properties:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-logistic-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Logistic Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Logistic Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formula_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formula:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-properties_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Properties:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-polynomial-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Polynomial Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Polynomial Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formula_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formula:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-properties_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Properties:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-support-vector-regression-svr" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Support Vector Regression (SVR)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Support Vector Regression (SVR)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-concepts_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-decision-tree-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Decision Tree Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Decision Tree Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-properties_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Properties:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-random-forest-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Random Forest Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Random Forest Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-properties_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Properties:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-ridge-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Ridge Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Ridge Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formula_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formula:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-lasso-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Lasso Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Lasso Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formula_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formula:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-properties_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Properties:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Algorithms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elastic-net-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elastic Net Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Elastic Net Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formula_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formula:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bayesian-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bayesian Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bayesian Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formula_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formula:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gradient-boosting-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gradient Boosting Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gradient Boosting Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-properties_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Properties:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-the-right-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choosing the Right Algorithm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-metrics-for-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Metrics for Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Metrics for Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-mean-absolute-error-mae" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Mean Absolute Error (MAE)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-mean-squared-error-mse" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Mean Squared Error (MSE)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-root-mean-squared-error-rmse" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Root Mean Squared Error (RMSE)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-r-squared-r2" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. R-squared (\( R^2 \))
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-adjusted-r-squared" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Adjusted R-squared
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-mean-absolute-percentage-error-mape" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Mean Absolute Percentage Error (MAPE)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-explained-variance-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Explained Variance Score
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-huber-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Huber Loss
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison-of-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparison of Metrics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-the-right-metric" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choosing the Right Metric
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-evaluation-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Evaluation Techniques
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -590,7 +1106,28 @@
         
   
   <span class="md-ellipsis">
-    Classification classifies the data into their respective classes
+    Classification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Clustering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unsupervised Machine Learning Algorithms
   </span>
   
 
@@ -675,6 +1212,500 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mathematical-formulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mathematical Formulation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-regression-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Regression Algorithms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Regression Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-linear-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Linear Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Linear Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formula:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Properties:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-logistic-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Logistic Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Logistic Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formula_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formula:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-properties_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Properties:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-polynomial-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Polynomial Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Polynomial Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formula_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formula:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-properties_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Properties:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-support-vector-regression-svr" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Support Vector Regression (SVR)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Support Vector Regression (SVR)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-concepts_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-decision-tree-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Decision Tree Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Decision Tree Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-properties_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Properties:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-random-forest-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Random Forest Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Random Forest Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-properties_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Properties:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-ridge-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Ridge Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Ridge Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formula_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formula:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-lasso-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Lasso Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Lasso Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formula_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formula:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-properties_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Properties:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Algorithms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Additional Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elastic-net-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elastic Net Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Elastic Net Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formula_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formula:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bayesian-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bayesian Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bayesian Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formula_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formula:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gradient-boosting-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gradient Boosting Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gradient Boosting Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-properties_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Properties:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-the-right-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choosing the Right Algorithm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-metrics-for-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Metrics for Regression
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Metrics for Regression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-mean-absolute-error-mae" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Mean Absolute Error (MAE)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-mean-squared-error-mse" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Mean Squared Error (MSE)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-root-mean-squared-error-rmse" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Root Mean Squared Error (RMSE)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-r-squared-r2" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. R-squared (\( R^2 \))
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-adjusted-r-squared" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Adjusted R-squared
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-mean-absolute-percentage-error-mape" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Mean Absolute Percentage Error (MAPE)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-explained-variance-score" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Explained Variance Score
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-huber-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Huber Loss
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison-of-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparison of Metrics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-the-right-metric" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choosing the Right Metric
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-evaluation-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Evaluation Techniques
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -691,7 +1722,290 @@
   
 
 
-<h1 id="regression-is-simply-the-prediction-of-future-outcomes-of-continuous-data">Regression is simply the prediction of future outcomes of continuous data.</h1>
+<h1 id="regression-analysis">Regression Analysis</h1>
+<p>Regression analysis is a fundamental statistical and machine learning technique for modeling the relationship between a dependent variable and one or more independent variables. The primary goal of regression is to predict or estimate the value of the dependent variable based on the input features.</p>
+<h2 id="key-concepts">Key Concepts</h2>
+<h3 id="mathematical-formulation">Mathematical Formulation</h3>
+<p>The general form of a regression model is:</p>
+<div class="arithmatex">\[y = f(X) + \epsilon\]</div>
+<p>Where:
+- <span class="arithmatex">\( y \)</span> is the dependent variable.<br>
+- <span class="arithmatex">\( X \)</span> represents the independent variables.<br>
+- <span class="arithmatex">\( f(X) \)</span> is the function capturing the relationship between <span class="arithmatex">\( X \)</span> and <span class="arithmatex">\( y \)</span>.<br>
+- <span class="arithmatex">\( \epsilon \)</span> is the error term (unexplained variation).</p>
+<p>For linear regression, <span class="arithmatex">\( f(X) \)</span> is linear, while for other methods like polynomial regression, <span class="arithmatex">\( f(X) \)</span> may have a more complex form.</p>
+<hr />
+<h2 id="types-of-regression-algorithms">Types of Regression Algorithms</h2>
+<h3 id="1-linear-regression">1. Linear Regression</h3>
+<p>Linear regression establishes a linear relationship between the dependent variable (<span class="arithmatex">\( y \)</span>) and the independent variables (<span class="arithmatex">\( X \)</span>).</p>
+<h4 id="formula">Formula:</h4>
+<div class="arithmatex">\[
+y = \beta_0 + \beta_1 X + \epsilon
+\]</div>
+<p>Where:
+- <span class="arithmatex">\( \beta_0 \)</span> is the intercept.
+- <span class="arithmatex">\( \beta_1 \)</span> is the coefficient.
+- <span class="arithmatex">\( \epsilon \)</span> is the error term.</p>
+<h4 id="key-properties">Key Properties:</h4>
+<ul>
+<li>Simple and interpretable.</li>
+<li>Prone to underfitting when the relationship is non-linear.</li>
+</ul>
+<hr />
+<h3 id="2-logistic-regression">2. Logistic Regression</h3>
+<p>Logistic regression predicts the probability of a binary outcome by applying a sigmoid function.</p>
+<h4 id="formula_1">Formula:</h4>
+<div class="arithmatex">\[
+P(y=1|X) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X)}}
+\]</div>
+<h4 id="key-properties_1">Key Properties:</h4>
+<ul>
+<li>Suitable for classification tasks.</li>
+<li>Outputs probabilities between 0 and 1.</li>
+</ul>
+<hr />
+<h3 id="3-polynomial-regression">3. Polynomial Regression</h3>
+<p>Polynomial regression extends linear regression by modeling the relationship as an <span class="arithmatex">\( n \)</span>-degree polynomial.</p>
+<h4 id="formula_2">Formula:</h4>
+<div class="arithmatex">\[
+y = \beta_0 + \beta_1 X + \beta_2 X^2 + \dots + \beta_n X^n + \epsilon
+\]</div>
+<h4 id="key-properties_2">Key Properties:</h4>
+<ul>
+<li>Fits non-linear relationships.</li>
+<li>May overfit if the degree of the polynomial is too high.</li>
+</ul>
+<hr />
+<h3 id="4-support-vector-regression-svr">4. Support Vector Regression (SVR)</h3>
+<p>SVR aims to find a hyperplane that maximizes the margin within a certain tolerance (<span class="arithmatex">\( \epsilon \)</span>).</p>
+<h4 id="key-concepts_1">Key Concepts:</h4>
+<ul>
+<li>Uses kernel functions (linear, polynomial, RBF).</li>
+<li>Robust to outliers.</li>
+</ul>
+<hr />
+<h3 id="5-decision-tree-regression">5. Decision Tree Regression</h3>
+<p>Decision Tree Regression uses a tree-like structure to model decisions based on feature splits.</p>
+<h4 id="key-properties_3">Key Properties:</h4>
+<ul>
+<li>Non-parametric and interpretable.</li>
+<li>Prone to overfitting without pruning.</li>
+</ul>
+<hr />
+<h3 id="6-random-forest-regression">6. Random Forest Regression</h3>
+<p>Random Forest Regression combines multiple decision trees using ensemble learning to improve accuracy and reduce overfitting.</p>
+<h4 id="key-properties_4">Key Properties:</h4>
+<ul>
+<li>Robust to overfitting and noise.</li>
+<li>Handles non-linear relationships.</li>
+</ul>
+<hr />
+<h3 id="7-ridge-regression">7. Ridge Regression</h3>
+<p>Ridge regression adds an <span class="arithmatex">\( L2 \)</span>-regularization term to linear regression to prevent overfitting.</p>
+<h4 id="formula_3">Formula:</h4>
+<div class="arithmatex">\[
+\text{Minimize: } \sum_{i=1}^n (y_i - \hat{y}_i)^2 + \lambda \sum_{j=1}^p \beta_j^2
+\]</div>
+<p>Where <span class="arithmatex">\( \lambda \)</span> controls the regularization strength.</p>
+<hr />
+<h3 id="8-lasso-regression">8. Lasso Regression</h3>
+<p>Lasso regression uses <span class="arithmatex">\( L1 \)</span>-regularization to enforce sparsity in the model, shrinking some coefficients to zero.</p>
+<h4 id="formula_4">Formula:</h4>
+<div class="arithmatex">\[
+\text{Minimize: } \sum_{i=1}^n (y_i - \hat{y}_i)^2 + \lambda \sum_{j=1}^p |\beta_j|
+\]</div>
+<h4 id="key-properties_5">Key Properties:</h4>
+<ul>
+<li>Performs feature selection.</li>
+<li>Robust to high-dimensional datasets.</li>
+</ul>
+<hr />
+<h2 id="additional-algorithms">Additional Algorithms</h2>
+<h3 id="elastic-net-regression">Elastic Net Regression</h3>
+<p>Elastic Net combines <span class="arithmatex">\( L1 \)</span> and <span class="arithmatex">\( L2 \)</span>-regularization for better generalization.</p>
+<h4 id="formula_5">Formula:</h4>
+<div class="arithmatex">\[
+\text{Minimize: } \sum_{i=1}^n (y_i - \hat{y}_i)^2 + \lambda_1 \sum_{j=1}^p |\beta_j| + \lambda_2 \sum_{j=1}^p \beta_j^2
+\]</div>
+<hr />
+<h3 id="bayesian-regression">Bayesian Regression</h3>
+<p>Bayesian regression incorporates prior distributions over model parameters, providing probabilistic predictions.</p>
+<h4 id="formula_6">Formula:</h4>
+<div class="arithmatex">\[
+p(\beta|X, y) \propto p(y|X, \beta) \cdot p(\beta)
+\]</div>
+<hr />
+<h3 id="gradient-boosting-regression">Gradient Boosting Regression</h3>
+<p>Gradient Boosting builds an additive model using decision trees to minimize a loss function.</p>
+<h4 id="key-properties_6">Key Properties:</h4>
+<ul>
+<li>Highly accurate.</li>
+<li>Requires careful tuning to avoid overfitting.</li>
+</ul>
+<hr />
+<h2 id="choosing-the-right-algorithm">Choosing the Right Algorithm</h2>
+<p>The choice of regression algorithm depends on:</p>
+<ul>
+<li><strong>Data Complexity</strong>: Non-linear relationships or noise.</li>
+<li><strong>Regularization Needs</strong>: High-dimensional or sparse data.</li>
+<li><strong>Interpretability</strong>: Simpler models like linear regression are easier to explain.</li>
+</ul>
+<hr />
+<h2 id="performance-metrics-for-regression">Performance Metrics for Regression</h2>
+<h3 id="1-mean-absolute-error-mae">1. Mean Absolute Error (MAE)</h3>
+<p>Measures the average magnitude of errors in predictions:</p>
+<div class="arithmatex">\[
+\text{MAE} = \frac{1}{n} \sum_{i=1}^n |y_i - \hat{y}_i|
+\]</div>
+<ul>
+<li><strong>Interpretation</strong>: Lower values indicate better model performance.</li>
+<li><strong>Sensitivity</strong>: Does not penalize large errors as heavily as squared metrics.</li>
+</ul>
+<hr />
+<h3 id="2-mean-squared-error-mse">2. Mean Squared Error (MSE)</h3>
+<p>Measures the average squared difference between actual and predicted values:</p>
+<div class="arithmatex">\[
+\text{MSE} = \frac{1}{n} \sum_{i=1}^n (y_i - \hat{y}_i)^2
+\]</div>
+<ul>
+<li><strong>Interpretation</strong>: Heavily penalizes larger errors.</li>
+<li><strong>Use Case</strong>: When large errors are particularly undesirable.</li>
+</ul>
+<hr />
+<h3 id="3-root-mean-squared-error-rmse">3. Root Mean Squared Error (RMSE)</h3>
+<p>The square root of MSE, providing error in the same units as the target variable:</p>
+<div class="arithmatex">\[
+\text{RMSE} = \sqrt{\frac{1}{n} \sum_{i=1}^n (y_i - \hat{y}_i)^2}
+\]</div>
+<ul>
+<li><strong>Interpretation</strong>: Easier to interpret than MSE due to units.</li>
+</ul>
+<hr />
+<h3 id="4-r-squared-r2">4. R-squared (<span class="arithmatex">\( R^2 \)</span>)</h3>
+<p>Represents the proportion of variance in the target variable explained by the model:</p>
+<div class="arithmatex">\[
+R^2 = 1 - \frac{\sum_{i=1}^n (y_i - \hat{y}_i)^2}{\sum_{i=1}^n (y_i - \bar{y})^2}
+\]</div>
+<ul>
+<li>
+<p><strong>Interpretation</strong>:</p>
+</li>
+<li>
+<p><span class="arithmatex">\( R^2 = 1 \)</span>: Perfect fit.</p>
+</li>
+<li><span class="arithmatex">\( R^2 = 0 \)</span>: Model explains no variance.</li>
+<li><span class="arithmatex">\( R^2 &lt; 0 \)</span>: Model is worse than a horizontal mean line.</li>
+</ul>
+<hr />
+<h3 id="5-adjusted-r-squared">5. Adjusted R-squared</h3>
+<p>Accounts for the number of predictors in the model:</p>
+<div class="arithmatex">\[
+\text{Adjusted } R^2 = 1 - \left(1 - R^2\right) \frac{n - 1}{n - p - 1}
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\( n \)</span>: Number of data points.</li>
+<li>
+<p><span class="arithmatex">\( p \)</span>: Number of predictors.</p>
+</li>
+<li>
+<p><strong>Interpretation</strong>: Penalizes adding irrelevant predictors to the model.</p>
+</li>
+</ul>
+<hr />
+<h3 id="6-mean-absolute-percentage-error-mape">6. Mean Absolute Percentage Error (MAPE)</h3>
+<p>Expresses error as a percentage of the actual values:</p>
+<div class="arithmatex">\[
+\text{MAPE} = \frac{1}{n} \sum_{i=1}^n \left| \frac{y_i - \hat{y}_i}{y_i} \right| \times 100
+\]</div>
+<ul>
+<li><strong>Use Case</strong>: Useful when target values vary significantly.</li>
+</ul>
+<hr />
+<h3 id="7-explained-variance-score">7. Explained Variance Score</h3>
+<p>Measures the proportion of variance explained by the model:</p>
+<div class="arithmatex">\[
+\text{Explained Variance} = 1 - \frac{\text{Var}(y - \hat{y})}{\text{Var}(y)}
+\]</div>
+<ul>
+<li><strong>Interpretation</strong>: Similar to <span class="arithmatex">\( R^2 \)</span>, but focuses on explained variance.</li>
+</ul>
+<hr />
+<h3 id="8-huber-loss">8. Huber Loss</h3>
+<p>Combines MAE and MSE for robust error measurement:</p>
+<div class="arithmatex">\[
+L_{\delta}(a) =
+\begin{cases} 
+\frac{1}{2}(a)^2 &amp; \text{for } |a| \leq \delta, \\
+\delta \cdot (|a| - \frac{\delta}{2}) &amp; \text{for } |a| &gt; \delta
+\end{cases}
+\]</div>
+<p>Where <span class="arithmatex">\( a = y - \hat{y} \)</span>.</p>
+<ul>
+<li><strong>Use Case</strong>: Robust to outliers in regression.</li>
+</ul>
+<hr />
+<h2 id="comparison-of-metrics">Comparison of Metrics</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MAE</strong></td>
+<td>Easy to interpret, less sensitive to outliers.</td>
+<td>May under-penalize large errors.</td>
+</tr>
+<tr>
+<td><strong>MSE</strong></td>
+<td>Penalizes large errors heavily.</td>
+<td>Less interpretable due to squaring.</td>
+</tr>
+<tr>
+<td><strong>RMSE</strong></td>
+<td>Same units as target variable.</td>
+<td>Still sensitive to outliers.</td>
+</tr>
+<tr>
+<td><strong>R-squared</strong></td>
+<td>Shows proportion of variance explained.</td>
+<td>Can be misleading with irrelevant features.</td>
+</tr>
+<tr>
+<td><strong>MAPE</strong></td>
+<td>Provides percentage error.</td>
+<td>Undefined for <span class="arithmatex">\( y_i = 0 \)</span>.</td>
+</tr>
+<tr>
+<td><strong>Huber Loss</strong></td>
+<td>Robust to outliers.</td>
+<td>Requires hyperparameter <span class="arithmatex">\( \delta \)</span>.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="choosing-the-right-metric">Choosing the Right Metric</h2>
+<ul>
+<li><strong>Small datasets with few outliers</strong>: Use MAE or MSE.</li>
+<li><strong>Sensitive to large errors</strong>: Use RMSE or Huber Loss.</li>
+<li><strong>Comparing model fit</strong>: Use <span class="arithmatex">\( R^2 \)</span> or Adjusted <span class="arithmatex">\( R^2 \)</span>.</li>
+<li><strong>Relative error</strong>: Use MAPE for interpretability.</li>
+</ul>
+<hr />
+<h2 id="visual-evaluation-techniques">Visual Evaluation Techniques</h2>
+<ul>
+<li><strong>Residual Plots</strong>: Show the difference between actual and predicted values.</li>
+<li><strong>Parity Plots</strong>: Compare predicted vs. actual values directly.</li>
+<li><strong>Error Histograms</strong>: Visualize the distribution of errors.</li>
+</ul>
+<hr />
+<h2 id="conclusion">Conclusion</h2>
+<p>Regression analysis is a versatile tool for predictive modeling. Each algorithm has its strengths and weaknesses, making it crucial to evaluate their performance based on the dataset and task at hand.</p>
+<hr />
 
 
 
@@ -746,6 +2060,10 @@
       <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
         <script src="../../../assets/_markdown_exec_pyodide.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
