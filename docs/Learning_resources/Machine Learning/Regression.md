@@ -30,6 +30,7 @@ y = \beta_0 + \beta_1 X + \epsilon
 \]
 
 Where:
+
 - \( \beta_0 \) is the intercept.
 - \( \beta_1 \) is the coefficient.
 - \( \epsilon \) is the error term.
