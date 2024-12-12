@@ -57,6 +57,8 @@ nav:
       - Learning_resources/Machine Learning/ML_basics.md
       - Learning_resources/Machine Learning/Regression.md
       - Learning_resources/Machine Learning/classification.md
+      - Learning_resources/Machine Learning/Clustering.md
+
 
   - Blog: blog.md
   - Contact: contact.md
@@ -68,6 +70,12 @@ plugins:
   - markdown-exec
 markdown_extensions:
 - pymdownx.superfences
+- pymdownx.arithmatex:
+    generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 
 
