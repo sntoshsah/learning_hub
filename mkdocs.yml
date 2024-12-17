@@ -49,6 +49,8 @@ nav:
   - Projects:
       - AI Engineer: projects/ai.md
       - Data Science: projects/data_science.md
+      - Machine Learning: projects/ML.md
+
   - Learning Resources:
     - Python Programming Concepts:
       - Learning_resources/Python/Python_Syntax.md
