@@ -10,28 +10,28 @@
         <meta name="author" content="Santosh Kumar Sah">
       
       
-        <link rel="canonical" href="https://mydomain.org/Learning_resources/Python/Python_Basics/">
+        <link rel="canonical" href="https://mydomain.org/projects/ML/">
       
       
-        <link rel="prev" href="../Python_Syntax/">
+        <link rel="prev" href="../data_science/">
       
       
-        <link rel="next" href="../../Machine%20Learning/ML_basics/">
+        <link rel="next" href="../../Learning_resources/Python/Python_Syntax/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
     
     
       
-        <title>Python Basics - Data Science and ML</title>
+        <title>Machine Learning - Data Science and ML</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,9 +50,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/_markdown_exec_pyodide.css">
+      <link rel="stylesheet" href="../../assets/_markdown_exec_pyodide.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#python-basics-variables-datatypes-keywords-and-literals" class="md-skip">
+        <a href="#ml-and-dl-codebook" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Data Science and ML" class="md-header__button md-logo" aria-label="Data Science and ML" data-md-component="logo">
+    <a href="../.." title="Data Science and ML" class="md-header__button md-logo" aria-label="Data Science and ML" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Python Basics
+              Machine Learning
             
           </span>
         </div>
@@ -227,7 +227,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Data Science and ML" class="md-nav__button md-logo" aria-label="Data Science and ML" data-md-component="logo">
+    <a href="../.." title="Data Science and ML" class="md-nav__button md-logo" aria-label="Data Science and ML" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -257,7 +257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -266,116 +266,6 @@
   
 
       </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-        
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
-            
-  
-  <span class="md-ellipsis">
-    Projects
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            Projects
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../projects/ai/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    AI Engineer
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../projects/data_science/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Data Science
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../projects/ML/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Machine Learning
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -401,63 +291,24 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
-    Learning Resources
+    Projects
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Learning Resources
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-    
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Python Programming Concepts
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3_1">
-            <span class="md-nav__icon md-icon"></span>
-            Python Programming Concepts
+            Projects
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -468,11 +319,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../Python_Syntax/" class="md-nav__link">
+      <a href="../ai/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Python Syntax
+    AI Engineer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data_science/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Science
   </span>
   
 
@@ -500,7 +372,7 @@
           
   
   <span class="md-ellipsis">
-    Python Basics
+    Machine Learning
   </span>
   
 
@@ -511,7 +383,7 @@
         
   
   <span class="md-ellipsis">
-    Python Basics
+    Machine Learning
   </span>
   
 
@@ -531,9 +403,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#python-basics-variables-datatypes-keywords-and-literals" class="md-nav__link">
+  <a href="#ml-and-dl-codebook" class="md-nav__link">
     <span class="md-ellipsis">
-      Python Basics: Variables, Datatypes, Keywords, and Literals
+      ML and DL CodeBook
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loal-rag-based-chatbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      loal RAG based Chatbot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nn-from-scratch" class="md-nav__link">
+    <span class="md-ellipsis">
+      nn From Scratch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basics-of-neural-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basics of Neural Network
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credit-card-fraud-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credit Card Fraud Detection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benagaluru-house-price-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benagaluru House Price Prediction
     </span>
   </a>
   
@@ -543,6 +460,132 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Learning Resources
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Learning Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Python Programming Concepts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Python Programming Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Learning_resources/Python/Python_Syntax/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Syntax
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Learning_resources/Python/Python_Basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Basics
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -600,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Machine%20Learning/ML_basics/" class="md-nav__link">
+      <a href="../../Learning_resources/Machine%20Learning/ML_basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -621,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Machine%20Learning/Regression/" class="md-nav__link">
+      <a href="../../Learning_resources/Machine%20Learning/Regression/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -642,7 +685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Machine%20Learning/classification/" class="md-nav__link">
+      <a href="../../Learning_resources/Machine%20Learning/classification/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -663,7 +706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Machine%20Learning/Clustering/" class="md-nav__link">
+      <a href="../../Learning_resources/Machine%20Learning/Clustering/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -699,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/" class="md-nav__link">
+      <a href="../../blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -719,7 +762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contact/" class="md-nav__link">
+      <a href="../../contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -757,9 +800,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#python-basics-variables-datatypes-keywords-and-literals" class="md-nav__link">
+  <a href="#ml-and-dl-codebook" class="md-nav__link">
     <span class="md-ellipsis">
-      Python Basics: Variables, Datatypes, Keywords, and Literals
+      ML and DL CodeBook
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loal-rag-based-chatbot" class="md-nav__link">
+    <span class="md-ellipsis">
+      loal RAG based Chatbot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nn-from-scratch" class="md-nav__link">
+    <span class="md-ellipsis">
+      nn From Scratch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basics-of-neural-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basics of Neural Network
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credit-card-fraud-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credit Card Fraud Detection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benagaluru-house-price-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benagaluru House Price Prediction
     </span>
   </a>
   
@@ -783,211 +871,14 @@
   
 
 
-  <h1>Python Basics</h1>
+  <h1>Machine Learning</h1>
 
-<h2 id="python-basics-variables-datatypes-keywords-and-literals">Python Basics: Variables, Datatypes, Keywords, and Literals</h2>
-<p>This guide provides a beginner-friendly introduction to variables, datatypes, keywords, and literals in Python, with examples and explanations.<br>
-<strong>1. Variables</strong><br>
-Definition</p>
-<p>Variables are containers for storing data values.
-In Python, you don’t need to declare a variable type explicitly. The type is inferred when you assign a value.</p>
-<p>Syntax:</p>
-<p>variable_name = value</p>
-<p>Rules</p>
-<pre><code>Must start with a letter or an underscore _.
-Cannot start with a number.
-Can contain letters, numbers, and underscores.
-Case-sensitive (name and Name are different).
-</code></pre>
-<p>Example:
-<div class="highlight"><pre><span></span><code><span class="c1"># Assigning values to variables</span>
-<span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>           <span class="c1"># Integer</span>
-<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Alice&quot;</span>   <span class="c1"># String</span>
-<span class="n">_pi</span> <span class="o">=</span> <span class="mf">3.14</span>       <span class="c1"># Float</span>
-<span class="n">is_valid</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># Boolean</span>
-
-<span class="c1"># Printing variables</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">_pi</span><span class="p">,</span> <span class="n">is_valid</span><span class="p">)</span>
-</code></pre></div>
-<p>10 Alice 3.14 True</p>
-<strong>2. Datatypes</strong><br>
-Definition</p>
-<p>Datatypes define the type of data a variable can hold.<br></p>
-<p>Common Datatypes</p>
-<table>
-<thead>
-<tr>
-<th>Datatype</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>int</code></td>
-<td>Integer numbers</td>
-<td><code>x = 5</code></td>
-</tr>
-<tr>
-<td><code>float</code></td>
-<td>Decimal numbers</td>
-<td><code>y = 3.14</code></td>
-</tr>
-<tr>
-<td><code>str</code></td>
-<td>Text or string data</td>
-<td><code>name = "Python"</code></td>
-</tr>
-<tr>
-<td><code>bool</code></td>
-<td>True/False values</td>
-<td><code>is_valid = True</code></td>
-</tr>
-<tr>
-<td><code>list</code></td>
-<td>Ordered collection of items</td>
-<td><code>nums = [1, 2, 3]</code></td>
-</tr>
-<tr>
-<td><code>tuple</code></td>
-<td>Immutable ordered collection</td>
-<td><code>coords = (10, 20)</code></td>
-</tr>
-<tr>
-<td><code>dict</code></td>
-<td>Key-value pairs</td>
-<td><code>person = {"name": "Alice", "age": 25}</code></td>
-</tr>
-<tr>
-<td><code>set</code></td>
-<td>Unordered collection of unique items</td>
-<td><code>unique_nums = {1, 2, 3}</code></td>
-</tr>
-</tbody>
-</table>
-<p>Examples
-<div class="highlight"><pre><span></span><code><span class="c1">#### Integer</span>
-<span class="n">age</span> <span class="o">=</span> <span class="mi">25</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">age</span><span class="p">))</span>  <span class="c1"># Output: &lt;class &#39;int&#39;&gt;</span>
-
-<span class="c1">#### Float</span>
-<span class="n">price</span> <span class="o">=</span> <span class="mf">19.99</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">price</span><span class="p">))</span>  <span class="c1"># Output: &lt;class &#39;float&#39;&gt;</span>
-
-<span class="c1">#### String</span>
-<span class="n">greeting</span> <span class="o">=</span> <span class="s2">&quot;Hello, World!&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">greeting</span><span class="p">))</span>  <span class="c1"># Output: &lt;class &#39;str&#39;&gt;</span>
-
-<span class="c1">#### List</span>
-<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">colors</span><span class="p">))</span>  <span class="c1"># Output: &lt;class &#39;list&#39;&gt;</span>
-
-<span class="c1">#### Dictionary</span>
-<span class="n">person</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">person</span><span class="p">))</span>  <span class="c1"># Output: &lt;class &#39;dict&#39;&gt;</span>
-</code></pre></div></p>
-<p><strong>3. Keywords</strong><br></p>
-<p>Definition<br>
-Keywords are reserved words in Python.
-They have a special meaning and cannot be used as variable names.</p>
-<p>Examples of Keywords</p>
-<p>and, or, not, if, else, while, for, import, def, class, True, False, None, return, etc.
-Usage
-<div class="highlight"><pre><span></span><code><span class="c1">#### Using keywords</span>
-<span class="k">if</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This is a keyword example.&quot;</span><span class="p">)</span>
-
-<span class="n">Check</span> <span class="n">All</span> <span class="n">Keywords</span>
-
-<span class="kn">import</span> <span class="nn">keyword</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">keyword</span><span class="o">.</span><span class="n">kwlist</span><span class="p">)</span>
-</code></pre></div></p>
-<p><strong>4. Literals</strong><br>
-Definition</p>
-<p>Literals are fixed values assigned to variables or used directly in expressions.</p>
-<p>Types of Literals</p>
-<table>
-<thead>
-<tr>
-<th>Literal Type</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Numeric</td>
-<td>Integer, Float, Complex</td>
-<td><code>10, 3.14, 2 + 3j</code></td>
-</tr>
-<tr>
-<td>String</td>
-<td>Text data</td>
-<td><code>"Hello", 'Python'</code></td>
-</tr>
-<tr>
-<td>Boolean</td>
-<td>Logical True/False Values</td>
-<td><code>True, False</code></td>
-</tr>
-<tr>
-<td>Special</td>
-<td>Represents absence of value</td>
-<td><code>None</code></td>
-</tr>
-</tbody>
-</table>
-<p>Examples
-<div class="highlight"><pre><span></span><code><span class="c1">#### Numeric Literals</span>
-<span class="n">int_literal</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">float_literal</span> <span class="o">=</span> <span class="mf">20.5</span>
-<span class="n">complex_literal</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span><span class="n">j</span>
-
-<span class="c1">#### String Literals</span>
-<span class="n">single_quote</span> <span class="o">=</span> <span class="s1">&#39;Hello&#39;</span>
-<span class="n">double_quote</span> <span class="o">=</span> <span class="s2">&quot;World&quot;</span>
-
-<span class="c1">#### Boolean Literals</span>
-<span class="n">is_active</span> <span class="o">=</span> <span class="kc">True</span>
-
-<span class="c1">#### Special Literal</span>
-<span class="n">empty_value</span> <span class="o">=</span> <span class="kc">None</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">int_literal</span><span class="p">,</span> <span class="n">float_literal</span><span class="p">,</span> <span class="n">complex_literal</span><span class="p">,</span> <span class="n">single_quote</span><span class="p">,</span> <span class="n">double_quote</span><span class="p">,</span> <span class="n">is_active</span><span class="p">,</span> <span class="n">empty_value</span><span class="p">)</span>
-</code></pre></div>
-Output:
-<p>100 20.5 (3+4j) Hello World True None</p></p>
-<p><strong>5. Python is Dynamically Typed</strong></p>
-<p>Python doesn’t require you to specify the type of a variable. The type is determined automatically based on the value assigned.
-Example
-<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>         <span class="c1"># x is an integer</span>
-<span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>   <span class="c1"># Now x is a string</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>       <span class="c1"># Output: Python</span>
-</code></pre></div>
-<strong>6. Example Program</strong>
-<div class="highlight"><pre><span></span><code><span class="c1"># Define variables</span>
-<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Alice&quot;</span>
-<span class="n">age</span> <span class="o">=</span> <span class="mi">30</span>
-<span class="n">is_student</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="n">grades</span> <span class="o">=</span> <span class="p">[</span><span class="mi">85</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">92</span><span class="p">]</span>
-
-<span class="c1"># Display information</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Name: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Age: </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Is Student: </span><span class="si">{</span><span class="n">is_student</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Grades: </span><span class="si">{</span><span class="n">grades</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</code></pre></div>
-Output:
-<p>Name: Alice</p>
-<p>Age: 30</p>
-<p>Is Student: False</p>
-<p>Grades: [85, 90, 92]</p></p>
-<p><strong>Quick Tips</strong></p>
-<pre><code>Use meaningful variable names (e.g., price, age, username).
-Use type() to check the datatype of a variable.
-Use comments (#) to explain your code.
-</code></pre>
-<p>This guide provides the foundation for understanding Python's core concepts. Keep practicing, and soon you'll master them! 😊</p>
+<h2 id="ml-and-dl-codebook">ML and DL CodeBook</h2>
+<h2 id="loal-rag-based-chatbot">loal RAG based Chatbot</h2>
+<h2 id="nn-from-scratch">nn From Scratch</h2>
+<h2 id="basics-of-neural-network">Basics of Neural Network</h2>
+<h2 id="credit-card-fraud-detection">Credit Card Fraud Detection</h2>
+<h2 id="benagaluru-house-price-prediction">Benagaluru House Price Prediction</h2>
 
 
 
@@ -1036,14 +927,14 @@ Use comments (#) to explain your code.
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.sections", "navigation.tracking", "content.tabs.link", "header.autohide", "content.code.annotate", "content.code.copy", "content.code.tabs", "content.code.execute"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.tracking", "content.tabs.link", "header.autohide", "content.code.annotate", "content.code.copy", "content.code.tabs", "content.code.execute"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../../assets/_markdown_exec_pyodide.js"></script>
+        <script src="../../assets/_markdown_exec_pyodide.js"></script>
       
-        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
