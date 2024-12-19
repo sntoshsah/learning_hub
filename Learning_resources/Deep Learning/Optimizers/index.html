@@ -10,28 +10,28 @@
         <meta name="author" content="Santosh Kumar Sah">
       
       
-        <link rel="canonical" href="https://mydomain.org/projects/ML/">
+        <link rel="canonical" href="https://mydomain.org/Learning_resources/Deep%20Learning/Optimizers/">
       
       
-        <link rel="prev" href="../data_science/">
+        <link rel="prev" href="../Backpropagation/">
       
       
-        <link rel="next" href="../../Learning_resources/Python/Python_Syntax/">
+        <link rel="next" href="../../../blog/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
     
     
       
-        <title>Machine Learning - Data Science and ML</title>
+        <title>Optimizers - Data Science and ML</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,9 +50,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/_markdown_exec_pyodide.css">
+      <link rel="stylesheet" href="../../../assets/_markdown_exec_pyodide.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#machine-learning-and-deep-learning-project-portfolio" class="md-skip">
+        <a href="#optimization-algorithms-in-neural-networks-detailed-overview" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Data Science and ML" class="md-header__button md-logo" aria-label="Data Science and ML" data-md-component="logo">
+    <a href="../../.." title="Data Science and ML" class="md-header__button md-logo" aria-label="Data Science and ML" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Machine Learning
+              Optimizers
             
           </span>
         </div>
@@ -227,7 +227,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Data Science and ML" class="md-nav__button md-logo" aria-label="Data Science and ML" data-md-component="logo">
+    <a href="../../.." title="Data Science and ML" class="md-nav__button md-logo" aria-label="Data Science and ML" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -257,7 +257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -266,6 +266,116 @@
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/ai/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Engineer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/data_science/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Science
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/ML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Machine Learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -291,331 +401,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
-            
-  
-  <span class="md-ellipsis">
-    Projects
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            Projects
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ai/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    AI Engineer
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../data_science/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Data Science
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Machine Learning
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Machine Learning
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#machine-learning-with-pytorch-and-scikit-learn" class="md-nav__link">
-    <span class="md-ellipsis">
-      📚 Machine Learning with PyTorch and Scikit-Learn
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="📚 Machine Learning with PyTorch and Scikit-Learn">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#machine-learning-with-pytorch-and-scikit-learn_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      "Machine Learning with PyTorch and Scikit-Learn".
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#local-rag-based-chatbot" class="md-nav__link">
-    <span class="md-ellipsis">
-      🤖 Local RAG-Based Chatbot
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🤖 Local RAG-Based Chatbot">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
-    <span class="md-ellipsis">
-      Features:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
-    <span class="md-ellipsis">
-      Purpose:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#neural-networks-from-scratch" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧠 Neural Networks from Scratch
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#basics-of-neural-networks" class="md-nav__link">
-    <span class="md-ellipsis">
-      🛠️ Basics of Neural Networks
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🛠️ Basics of Neural Networks">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#what-youll-learn" class="md-nav__link">
-    <span class="md-ellipsis">
-      What You’ll Learn:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#credit-card-fraud-detection" class="md-nav__link">
-    <span class="md-ellipsis">
-      🕵️‍♂️ Credit Card Fraud Detection
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🕵️‍♂️ Credit Card Fraud Detection">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#objective" class="md-nav__link">
-    <span class="md-ellipsis">
-      Objective:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#technologies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Technologies:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#use-case" class="md-nav__link">
-    <span class="md-ellipsis">
-      Use Case:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bengaluru-house-price-prediction" class="md-nav__link">
-    <span class="md-ellipsis">
-      🏠 Bengaluru House Price Prediction
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🏠 Bengaluru House Price Prediction">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#objective_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Objective:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#technologies_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Technologies:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lets-build-together" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 Let’s Build Together
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-        
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -629,7 +415,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Learning Resources
@@ -680,7 +466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Learning_resources/Python/Python_Syntax/" class="md-nav__link">
+      <a href="../../Python/Python_Syntax/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -701,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Learning_resources/Python/Python_Basics/" class="md-nav__link">
+      <a href="../../Python/Python_Basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -722,7 +508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Learning_resources/Python/Conditions_and_Loops/" class="md-nav__link">
+      <a href="../../Python/Conditions_and_Loops/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -788,7 +574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Learning_resources/Machine%20Learning/ML_basics/" class="md-nav__link">
+      <a href="../../Machine%20Learning/ML_basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -809,7 +595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Learning_resources/Machine%20Learning/Regression/" class="md-nav__link">
+      <a href="../../Machine%20Learning/Regression/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -830,7 +616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Learning_resources/Machine%20Learning/classification/" class="md-nav__link">
+      <a href="../../Machine%20Learning/classification/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -851,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Learning_resources/Machine%20Learning/Clustering/" class="md-nav__link">
+      <a href="../../Machine%20Learning/Clustering/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -877,6 +663,8 @@
                 
   
   
+    
+  
   
   
     
@@ -885,11 +673,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -903,7 +691,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             Deep Learning
@@ -917,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Learning_resources/Deep%20Learning/Neural_Network/" class="md-nav__link">
+      <a href="../Neural_Network/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -938,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Learning_resources/Deep%20Learning/Backpropagation/" class="md-nav__link">
+      <a href="../Backpropagation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -956,10 +744,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../Learning_resources/Deep%20Learning/Optimizers/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Optimizers
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -968,6 +774,156 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#optimization-algorithms-in-neural-networks-detailed-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimization Algorithms in Neural Networks: Detailed Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gradient-based-optimization-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gradient-Based Optimization Algorithms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gradient-Based Optimization Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-gradient-descent-gd" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Gradient Descent (GD)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-stochastic-gradient-descent-sgd" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Stochastic Gradient Descent (SGD)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-mini-batch-gradient-descent" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Mini-Batch Gradient Descent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-momentum" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Momentum
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-nesterov-accelerated-gradient-nag" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Nesterov Accelerated Gradient (NAG)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-adagrad" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Adagrad
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-rmsprop" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. RMSProp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-adam-adaptive-moment-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Adam (Adaptive Moment Estimation)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparison-of-optimization-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparison of Optimization Algorithms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-example-using-adam-optimizer-in-pytorch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code Example: Using Adam Optimizer in PyTorch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagram-optimization-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Optimization Workflow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -995,7 +951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/" class="md-nav__link">
+      <a href="../../../blog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1015,7 +971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contact/" class="md-nav__link">
+      <a href="../../../contact/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1045,8 +1001,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1055,19 +1009,91 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#machine-learning-with-pytorch-and-scikit-learn" class="md-nav__link">
+  <a href="#optimization-algorithms-in-neural-networks-detailed-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      📚 Machine Learning with PyTorch and Scikit-Learn
+      Optimization Algorithms in Neural Networks: Detailed Overview
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="📚 Machine Learning with PyTorch and Scikit-Learn">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gradient-based-optimization-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gradient-Based Optimization Algorithms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gradient-Based Optimization Algorithms">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#machine-learning-with-pytorch-and-scikit-learn_1" class="md-nav__link">
+  <a href="#1-gradient-descent-gd" class="md-nav__link">
     <span class="md-ellipsis">
-      "Machine Learning with PyTorch and Scikit-Learn".
+      1. Gradient Descent (GD)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-stochastic-gradient-descent-sgd" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Stochastic Gradient Descent (SGD)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-mini-batch-gradient-descent" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Mini-Batch Gradient Descent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-momentum" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Momentum
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-nesterov-accelerated-gradient-nag" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Nesterov Accelerated Gradient (NAG)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-adagrad" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Adagrad
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-rmsprop" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. RMSProp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-adam-adaptive-moment-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Adam (Adaptive Moment Estimation)
     </span>
   </a>
   
@@ -1079,150 +1105,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#local-rag-based-chatbot" class="md-nav__link">
+  <a href="#comparison-of-optimization-algorithms" class="md-nav__link">
     <span class="md-ellipsis">
-      🤖 Local RAG-Based Chatbot
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🤖 Local RAG-Based Chatbot">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
-    <span class="md-ellipsis">
-      Features:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
-    <span class="md-ellipsis">
-      Purpose:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#neural-networks-from-scratch" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧠 Neural Networks from Scratch
+      Comparison of Optimization Algorithms
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#basics-of-neural-networks" class="md-nav__link">
+  <a href="#code-example-using-adam-optimizer-in-pytorch" class="md-nav__link">
     <span class="md-ellipsis">
-      🛠️ Basics of Neural Networks
+      Code Example: Using Adam Optimizer in PyTorch
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="🛠️ Basics of Neural Networks">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#what-youll-learn" class="md-nav__link">
-    <span class="md-ellipsis">
-      What You’ll Learn:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#credit-card-fraud-detection" class="md-nav__link">
+  <a href="#diagram-optimization-workflow" class="md-nav__link">
     <span class="md-ellipsis">
-      🕵️‍♂️ Credit Card Fraud Detection
+      Diagram: Optimization Workflow
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="🕵️‍♂️ Credit Card Fraud Detection">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#objective" class="md-nav__link">
-    <span class="md-ellipsis">
-      Objective:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#technologies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Technologies:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#use-case" class="md-nav__link">
-    <span class="md-ellipsis">
-      Use Case:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bengaluru-house-price-prediction" class="md-nav__link">
+  <a href="#conclusion" class="md-nav__link">
     <span class="md-ellipsis">
-      🏠 Bengaluru House Price Prediction
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🏠 Bengaluru House Price Prediction">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#objective_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Objective:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#technologies_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Technologies:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lets-build-together" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 Let’s Build Together
+      Conclusion
     </span>
   </a>
   
@@ -1246,79 +1158,265 @@
   
 
 
-<h1 id="machine-learning-and-deep-learning-project-portfolio">Machine Learning and Deep Learning Project Portfolio</h1>
-<p>Welcome to my collection of <strong>Machine Learning (ML)</strong> and <strong>Deep Learning (DL)</strong> projects! 🚀<br />
-Here, you will find practical implementations, hands-on tutorials, and real-world use cases.  </p>
+  <h1>Optimizers</h1>
+
+<h3 id="optimization-algorithms-in-neural-networks-detailed-overview">Optimization Algorithms in Neural Networks: Detailed Overview</h3>
+<p>Optimization algorithms play a crucial role in training neural networks by minimizing the <strong>loss function</strong>, which quantifies the error between the predicted and actual outputs. The goal of these algorithms is to adjust the model’s parameters (weights and biases) to achieve the best possible performance.</p>
 <hr />
-<h2 id="machine-learning-with-pytorch-and-scikit-learn">📚 Machine Learning with PyTorch and Scikit-Learn</h2>
-<p>This section contains all the <strong>source code</strong> from the book:  </p>
-<h3 id="machine-learning-with-pytorch-and-scikit-learn_1"><em>"Machine Learning with PyTorch and Scikit-Learn"</em>.</h3>
-<p>It is an excellent resource for understanding machine learning concepts and their implementations using:</p>
+<h3 id="gradient-based-optimization-algorithms"><strong>Gradient-Based Optimization Algorithms</strong></h3>
+<p>These algorithms rely on <strong>gradients</strong> to optimize the loss function. Gradients are computed using backpropagation.</p>
+<hr />
+<h4 id="1-gradient-descent-gd">1. <strong>Gradient Descent (GD)</strong></h4>
 <ul>
-<li>PyTorch</li>
-<li>Scikit-Learn</li>
+<li><strong>Description</strong>: Updates the weights by calculating the gradient of the loss function for the entire training dataset.</li>
+<li><strong>Update Rule</strong>:</li>
 </ul>
-<p>Dive in and explore real-world <strong>ML</strong> techniques with clean, reusable code.  </p>
-<hr />
-<h2 id="local-rag-based-chatbot">🤖 Local RAG-Based Chatbot</h2>
-<p>A <strong>Retrieval-Augmented Generation (RAG)</strong> based chatbot app! 💬</p>
-<h3 id="features"><strong>Features</strong>:</h3>
+<div class="arithmatex">\[
+w \gets w - \eta \frac{\partial L}{\partial w}
+\]</div>
+<p>where:</p>
 <ul>
-<li>Upload a PDF document.</li>
-<li>Ask any questions related to the document.</li>
-<li>Get <strong>accurate responses</strong> extracted from the uploaded document.</li>
+<li><span class="arithmatex">\( \eta \)</span>: Learning rate.</li>
+<li><span class="arithmatex">\( \frac{\partial L}{\partial w} \)</span>: Gradient of the loss <span class="arithmatex">\( L \)</span> with respect to <span class="arithmatex">\( w \)</span>.</li>
 </ul>
-<h3 id="purpose"><strong>Purpose</strong>:</h3>
-<p>Enhances question-answering systems by combining <strong>retrieval</strong> and <strong>generation</strong> capabilities.</p>
-<hr />
-<h2 id="neural-networks-from-scratch">🧠 Neural Networks from Scratch</h2>
-<p>This project demystifies the inner workings of <strong>Neural Networks</strong>.  </p>
+<p><br></p>
+<p><strong>Advantages</strong>:</p>
 <ul>
-<li>Learn to implement a neural network <strong>from scratch</strong>.</li>
-<li>Understand its building blocks, activation functions, and forward/backward propagation.</li>
+<li>Simple and effective for convex functions.</li>
 </ul>
-<p>This is ideal for beginners looking to dive deeper into <strong>AI fundamentals</strong>.</p>
-<hr />
-<h2 id="basics-of-neural-networks">🛠️ Basics of Neural Networks</h2>
-<p>An introductory project to implement basic <strong>Neural Networks</strong>.  </p>
-<h3 id="what-youll-learn">What You’ll Learn:</h3>
+<p><strong>Disadvantages</strong>:</p>
 <ul>
-<li>Key neural network concepts.</li>
-<li>Step-by-step <strong>implementation</strong> of a simple NN.</li>
+<li>Computationally expensive for large datasets.</li>
+<li>Requires the entire dataset for each update.</li>
 </ul>
-<p>Great starting point for exploring deep learning frameworks.</p>
 <hr />
-<h2 id="credit-card-fraud-detection">🕵️‍♂️ Credit Card Fraud Detection</h2>
-<p>A <strong>Classification-based Machine Learning</strong> project.  </p>
-<h3 id="objective"><strong>Objective</strong>:</h3>
-<p>Predict if a credit card transaction is <strong>fraudulent</strong> or not.</p>
-<h3 id="technologies"><strong>Technologies</strong>:</h3>
+<h4 id="2-stochastic-gradient-descent-sgd">2. <strong>Stochastic Gradient Descent (SGD)</strong></h4>
 <ul>
-<li>Machine Learning models for binary classification.</li>
-<li>Data preprocessing, feature scaling, and model evaluation.</li>
+<li><strong>Description</strong>: Updates the weights using a single randomly selected training example at each step.</li>
+<li>
+<p><strong>Update Rule</strong>:</p>
+<div class="arithmatex">\[
+w \gets w - \eta \frac{\partial L_i}{\partial w}
+\]</div>
+</li>
 </ul>
-<h3 id="use-case">Use Case:</h3>
-<p>Improve fraud detection systems in financial sectors. 🚨</p>
-<hr />
-<h2 id="bengaluru-house-price-prediction">🏠 Bengaluru House Price Prediction</h2>
-<p>A <strong>House Price Prediction</strong> project for Bengaluru City! 📊</p>
-<h3 id="objective_1"><strong>Objective</strong>:</h3>
-<p>Develop a machine learning model to predict <strong>house prices</strong> based on features like:
-- Location
-- Area
-- Bedrooms
-- Amenities  </p>
-<h3 id="technologies_1"><strong>Technologies</strong>:</h3>
+<p>where <span class="arithmatex">\( L_i \)</span> is the loss for a single data point.</p>
+<p><strong>Advantages</strong>:</p>
 <ul>
-<li>Regression models for price prediction.</li>
-<li>Exploratory Data Analysis (EDA) and feature engineering.</li>
+<li>Faster updates.</li>
+<li>Can escape local minima due to randomness.</li>
 </ul>
-<p>This project is perfect for learning <strong>regression techniques</strong> and tackling <strong>real estate datasets</strong>.</p>
+<p><strong>Disadvantages</strong>:</p>
+<ul>
+<li>High variance in updates, leading to noisy convergence.</li>
+</ul>
 <hr />
-<h2 id="lets-build-together">🚀 Let’s Build Together</h2>
-<p>Feel free to explore these projects, clone repositories, and contribute!<br />
-Whether you're a beginner or an expert, these projects will guide you in understanding core ML and DL concepts through practical coding.  </p>
-<p>Happy Learning! 🧑‍💻✨  </p>
+<h4 id="3-mini-batch-gradient-descent">3. <strong>Mini-Batch Gradient Descent</strong></h4>
+<ul>
+<li><strong>Description</strong>: Combines the advantages of GD and SGD by using small batches of data for each update.</li>
+<li><strong>Update Rule</strong>:</li>
+</ul>
+<div class="arithmatex">\[
+w \gets w - \eta \frac{1}{m} \sum_{i=1}^{m} \frac{\partial L_i}{\partial w}
+\]</div>
+<p>where <span class="arithmatex">\( m \)</span> is the batch size.</p>
+<p><strong>Advantages</strong>:
+    - Faster convergence than GD.
+    - Reduces noise compared to SGD.</p>
+<p><strong>Disadvantages</strong>:
+    - Requires tuning the batch size.</p>
+<hr />
+<h4 id="4-momentum">4. <strong>Momentum</strong></h4>
+<ul>
+<li><strong>Description</strong>: Adds a fraction of the previous update to the current update to accelerate convergence.</li>
+<li><strong>Update Rule</strong>:</li>
+</ul>
+<div class="arithmatex">\[
+v_t = \gamma v_{t-1} + \eta \frac{\partial L}{\partial w}
+\]</div>
+<div class="arithmatex">\[
+w \gets w - v_t
+\]</div>
+<p>where <span class="arithmatex">\( \gamma \)</span> is the momentum factor (e.g., 0.9).</p>
+<p><strong>Advantages</strong>:</p>
+<ul>
+<li>Speeds up convergence in directions with consistent gradients.</li>
+<li>Reduces oscillations.</li>
+</ul>
+<hr />
+<h4 id="5-nesterov-accelerated-gradient-nag">5. <strong>Nesterov Accelerated Gradient (NAG)</strong></h4>
+<ul>
+<li><strong>Description</strong>: A variation of Momentum that computes the gradient at the approximate future position of the parameters.</li>
+<li><strong>Update Rule</strong>:</li>
+</ul>
+<div class="arithmatex">\[
+v_t = \gamma v_{t-1} + \eta \frac{\partial L}{\partial w_t - \gamma v_{t-1}}
+\]</div>
+<div class="arithmatex">\[
+w \gets w - v_t
+\]</div>
+<p><strong>Advantages</strong>:
+  - Faster convergence than Momentum.</p>
+<hr />
+<h4 id="6-adagrad">6. <strong>Adagrad</strong></h4>
+<ul>
+<li><strong>Description</strong>: Adapts the learning rate for each parameter based on the sum of squared gradients.</li>
+<li><strong>Update Rule</strong>:</li>
+</ul>
+<div class="arithmatex">\[
+w \gets w - \frac{\eta}{\sqrt{G_t + \epsilon}} \frac{\partial L}{\partial w}
+\]</div>
+<p>where <span class="arithmatex">\( G_t \)</span> is the sum of squared gradients and <span class="arithmatex">\( \epsilon \)</span> is a small constant.</p>
+<p><strong>Advantages</strong>:
+  - Works well for sparse data.</p>
+<p><strong>Disadvantages</strong>:
+  - Learning rate may become too small over time.</p>
+<hr />
+<h4 id="7-rmsprop">7. <strong>RMSProp</strong></h4>
+<ul>
+<li><strong>Description</strong>: Modifies Adagrad by using an exponentially decaying average of squared gradients.</li>
+<li><strong>Update Rule</strong>:</li>
+</ul>
+<div class="arithmatex">\[
+G_t = \beta G_{t-1} + (1 - \beta) \frac{\partial L}{\partial w}^2
+\]</div>
+<div class="arithmatex">\[
+w \gets w - \frac{\eta}{\sqrt{G_t + \epsilon}} \frac{\partial L}{\partial w}
+\]</div>
+<p>where <span class="arithmatex">\( \beta \)</span> is the decay rate.</p>
+<p><strong>Advantages</strong>:</p>
+<ul>
+<li>Suitable for non-stationary objectives.</li>
+<li>Prevents learning rates from becoming too small.</li>
+</ul>
+<hr />
+<h4 id="8-adam-adaptive-moment-estimation">8. <strong>Adam (Adaptive Moment Estimation)</strong></h4>
+<ul>
+<li><strong>Description</strong>: Combines Momentum and RMSProp by maintaining both moving averages of gradients and their squared values.</li>
+<li><strong>Update Rule</strong>:</li>
+</ul>
+<div class="arithmatex">\[
+m_t = \beta_1 m_{t-1} + (1 - \beta_1) \frac{\partial L}{\partial w}
+\]</div>
+<div class="arithmatex">\[
+v_t = \beta_2 v_{t-1} + (1 - \beta_2) \left( \frac{\partial L}{\partial w} \right)^2
+\]</div>
+<div class="arithmatex">\[
+w \gets w - \frac{\eta}{\sqrt{\hat{v}_t} + \epsilon} \hat{m}_t
+\]</div>
+<p>where:
+  - <span class="arithmatex">\( \hat{m}_t \)</span> and <span class="arithmatex">\( \hat{v}_t \)</span> are bias-corrected estimates of <span class="arithmatex">\( m_t \)</span> and <span class="arithmatex">\( v_t \)</span>.</p>
+<p><strong>Advantages</strong>:</p>
+<ul>
+<li>Works well for most problems.</li>
+<li>Combines benefits of Momentum and RMSProp.</li>
+</ul>
+<hr />
+<h3 id="comparison-of-optimization-algorithms"><strong>Comparison of Optimization Algorithms</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th>Learning Rate</th>
+<th>Memory Requirement</th>
+<th>Convergence Speed</th>
+<th>Suitable for Large Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gradient Descent</td>
+<td>Fixed</td>
+<td>Low</td>
+<td>Slow</td>
+<td>No</td>
+</tr>
+<tr>
+<td>SGD</td>
+<td>Fixed</td>
+<td>Low</td>
+<td>Fast</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Momentum</td>
+<td>Fixed</td>
+<td>Low</td>
+<td>Faster</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>NAG</td>
+<td>Fixed</td>
+<td>Low</td>
+<td>Faster</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Adagrad</td>
+<td>Adaptive</td>
+<td>Moderate</td>
+<td>Moderate</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>RMSProp</td>
+<td>Adaptive</td>
+<td>Moderate</td>
+<td>Moderate</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Adam</td>
+<td>Adaptive</td>
+<td>High</td>
+<td>Fast</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="code-example-using-adam-optimizer-in-pytorch"><strong>Code Example: Using Adam Optimizer in PyTorch</strong></h3>
+<p>Here’s an example of implementing an optimizer in PyTorch:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
+<span class="kn">import</span> <span class="nn">torch.optim</span> <span class="k">as</span> <span class="nn">optim</span>
+
+<span class="c1"># Define a simple model</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Define loss function</span>
+<span class="n">criterion</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">MSELoss</span><span class="p">()</span>
+
+<span class="c1"># Define optimizer (Adam)</span>
+<span class="n">optimizer</span> <span class="o">=</span> <span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
+
+<span class="c1"># Dummy data</span>
+<span class="n">inputs</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">6.0</span><span class="p">]])</span>
+<span class="n">targets</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mf">3.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">7.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">11.0</span><span class="p">]])</span>
+
+<span class="c1"># Training loop</span>
+<span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+    <span class="n">optimizer</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>  <span class="c1"># Clear gradients</span>
+    <span class="n">outputs</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>  <span class="c1"># Forward pass</span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="n">criterion</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="n">targets</span><span class="p">)</span>  <span class="c1"># Compute loss</span>
+    <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>  <span class="c1"># Backpropagation</span>
+    <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>  <span class="c1"># Update parameters</span>
+
+    <span class="k">if</span> <span class="n">epoch</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Epoch </span><span class="si">{</span><span class="n">epoch</span><span class="si">}</span><span class="s1">, Loss: </span><span class="si">{</span><span class="n">loss</span><span class="o">.</span><span class="n">item</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div>
+<hr />
+<h3 id="diagram-optimization-workflow"><strong>Diagram: Optimization Workflow</strong></h3>
+<pre class="mermaid"><code>graph TD
+    A[Initialize Weights and Biases] --&gt; B[Compute Gradients]
+    B --&gt; C[Update Weights Using Optimization Rule]
+    C --&gt; D[Check Stopping Condition]
+    D --&gt;|Condition Met| E[End]
+    D --&gt;|Condition Not Met| B[Compute Gradients]</code></pre>
+<hr />
+<h3 id="conclusion"><strong>Conclusion</strong></h3>
+<p>Optimization algorithms are the backbone of neural network training. Choosing the right algorithm depends on the problem, data size, and desired computational efficiency. Among all, <strong>Adam</strong> is the most widely used due to its adaptive nature and robustness.</p>
 
 
 
@@ -1367,14 +1465,14 @@ Whether you're a beginner or an expert, these projects will guide you in underst
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.tracking", "content.tabs.link", "header.autohide", "content.code.annotate", "content.code.copy", "content.code.tabs", "content.code.execute"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.sections", "navigation.tracking", "content.tabs.link", "header.autohide", "content.code.annotate", "content.code.copy", "content.code.tabs", "content.code.execute"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="../../assets/_markdown_exec_pyodide.js"></script>
+        <script src="../../../assets/_markdown_exec_pyodide.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
