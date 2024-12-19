@@ -16,7 +16,7 @@
         <link rel="prev" href="../Backpropagation/">
       
       
-        <link rel="next" href="../../../blog/">
+        <link rel="next" href="../CNN/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -929,6 +929,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CNN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Convolutional Neural Networks (CNN) - A Detailed Explanation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1169,23 +1190,24 @@
 <h4 id="1-gradient-descent-gd">1. <strong>Gradient Descent (GD)</strong></h4>
 <ul>
 <li><strong>Description</strong>: Updates the weights by calculating the gradient of the loss function for the entire training dataset.</li>
-<li><strong>Update Rule</strong>:</li>
-</ul>
-<div class="arithmatex">\[
-w \gets w - \eta \frac{\partial L}{\partial w}
-\]</div>
-<p>where:</p>
-<ul>
+<li><strong>Update Rule</strong>:
+  [
+  w \gets w - \eta \frac{\partial L}{\partial w}
+  ]
+  where:</li>
 <li><span class="arithmatex">\( \eta \)</span>: Learning rate.</li>
-<li><span class="arithmatex">\( \frac{\partial L}{\partial w} \)</span>: Gradient of the loss <span class="arithmatex">\( L \)</span> with respect to <span class="arithmatex">\( w \)</span>.</li>
-</ul>
-<p><br></p>
+<li>
+<p><span class="arithmatex">\( \frac{\partial L}{\partial w} \)</span>: Gradient of the loss <span class="arithmatex">\( L \)</span> with respect to <span class="arithmatex">\( w \)</span>.</p>
+</li>
+<li>
 <p><strong>Advantages</strong>:</p>
-<ul>
-<li>Simple and effective for convex functions.</li>
-</ul>
+</li>
+<li>
+<p>Simple and effective for convex functions.</p>
+</li>
+<li>
 <p><strong>Disadvantages</strong>:</p>
-<ul>
+</li>
 <li>Computationally expensive for large datasets.</li>
 <li>Requires the entire dataset for each update.</li>
 </ul>
@@ -1194,52 +1216,64 @@ w \gets w - \eta \frac{\partial L}{\partial w}
 <ul>
 <li><strong>Description</strong>: Updates the weights using a single randomly selected training example at each step.</li>
 <li>
-<p><strong>Update Rule</strong>:</p>
-<div class="arithmatex">\[
-w \gets w - \eta \frac{\partial L_i}{\partial w}
-\]</div>
+<p><strong>Update Rule</strong>:
+  [
+  w \gets w - \eta \frac{\partial L_i}{\partial w}
+  ]
+  where <span class="arithmatex">\( L_i \)</span> is the loss for a single data point.</p>
 </li>
-</ul>
-<p>where <span class="arithmatex">\( L_i \)</span> is the loss for a single data point.</p>
+<li>
 <p><strong>Advantages</strong>:</p>
-<ul>
+</li>
 <li>Faster updates.</li>
-<li>Can escape local minima due to randomness.</li>
-</ul>
+<li>
+<p>Can escape local minima due to randomness.</p>
+</li>
+<li>
 <p><strong>Disadvantages</strong>:</p>
-<ul>
+</li>
 <li>High variance in updates, leading to noisy convergence.</li>
 </ul>
 <hr />
 <h4 id="3-mini-batch-gradient-descent">3. <strong>Mini-Batch Gradient Descent</strong></h4>
 <ul>
 <li><strong>Description</strong>: Combines the advantages of GD and SGD by using small batches of data for each update.</li>
-<li><strong>Update Rule</strong>:</li>
+<li>
+<p><strong>Update Rule</strong>:
+  [
+  w \gets w - \eta \frac{1}{m} \sum_{i=1}^{m} \frac{\partial L_i}{\partial w}
+  ]
+  where <span class="arithmatex">\( m \)</span> is the batch size.</p>
+</li>
+<li>
+<p><strong>Advantages</strong>:</p>
+</li>
+<li>Faster convergence than GD.</li>
+<li>
+<p>Reduces noise compared to SGD.</p>
+</li>
+<li>
+<p><strong>Disadvantages</strong>:</p>
+</li>
+<li>Requires tuning the batch size.</li>
 </ul>
-<div class="arithmatex">\[
-w \gets w - \eta \frac{1}{m} \sum_{i=1}^{m} \frac{\partial L_i}{\partial w}
-\]</div>
-<p>where <span class="arithmatex">\( m \)</span> is the batch size.</p>
-<p><strong>Advantages</strong>:
-    - Faster convergence than GD.
-    - Reduces noise compared to SGD.</p>
-<p><strong>Disadvantages</strong>:
-    - Requires tuning the batch size.</p>
 <hr />
 <h4 id="4-momentum">4. <strong>Momentum</strong></h4>
 <ul>
 <li><strong>Description</strong>: Adds a fraction of the previous update to the current update to accelerate convergence.</li>
-<li><strong>Update Rule</strong>:</li>
-</ul>
-<div class="arithmatex">\[
-v_t = \gamma v_{t-1} + \eta \frac{\partial L}{\partial w}
-\]</div>
-<div class="arithmatex">\[
-w \gets w - v_t
-\]</div>
-<p>where <span class="arithmatex">\( \gamma \)</span> is the momentum factor (e.g., 0.9).</p>
+<li>
+<p><strong>Update Rule</strong>:
+  [
+  v_t = \gamma v_{t-1} + \eta \frac{\partial L}{\partial w}
+  ]
+  [
+  w \gets w - v_t
+  ]
+  where <span class="arithmatex">\( \gamma \)</span> is the momentum factor (e.g., 0.9).</p>
+</li>
+<li>
 <p><strong>Advantages</strong>:</p>
-<ul>
+</li>
 <li>Speeds up convergence in directions with consistent gradients.</li>
 <li>Reduces oscillations.</li>
 </ul>
@@ -1247,45 +1281,59 @@ w \gets w - v_t
 <h4 id="5-nesterov-accelerated-gradient-nag">5. <strong>Nesterov Accelerated Gradient (NAG)</strong></h4>
 <ul>
 <li><strong>Description</strong>: A variation of Momentum that computes the gradient at the approximate future position of the parameters.</li>
-<li><strong>Update Rule</strong>:</li>
+<li>
+<p><strong>Update Rule</strong>:
+  [
+  v_t = \gamma v_{t-1} + \eta \frac{\partial L}{\partial w_t - \gamma v_{t-1}}
+  ]
+  [
+  w \gets w - v_t
+  ]</p>
+</li>
+<li>
+<p><strong>Advantages</strong>:</p>
+</li>
+<li>Faster convergence than Momentum.</li>
 </ul>
-<div class="arithmatex">\[
-v_t = \gamma v_{t-1} + \eta \frac{\partial L}{\partial w_t - \gamma v_{t-1}}
-\]</div>
-<div class="arithmatex">\[
-w \gets w - v_t
-\]</div>
-<p><strong>Advantages</strong>:
-  - Faster convergence than Momentum.</p>
 <hr />
 <h4 id="6-adagrad">6. <strong>Adagrad</strong></h4>
 <ul>
 <li><strong>Description</strong>: Adapts the learning rate for each parameter based on the sum of squared gradients.</li>
-<li><strong>Update Rule</strong>:</li>
+<li>
+<p><strong>Update Rule</strong>:
+  [
+  w \gets w - \frac{\eta}{\sqrt{G_t + \epsilon}} \frac{\partial L}{\partial w}
+  ]
+  where <span class="arithmatex">\( G_t \)</span> is the sum of squared gradients and <span class="arithmatex">\( \epsilon \)</span> is a small constant.</p>
+</li>
+<li>
+<p><strong>Advantages</strong>:</p>
+</li>
+<li>
+<p>Works well for sparse data.</p>
+</li>
+<li>
+<p><strong>Disadvantages</strong>:</p>
+</li>
+<li>Learning rate may become too small over time.</li>
 </ul>
-<div class="arithmatex">\[
-w \gets w - \frac{\eta}{\sqrt{G_t + \epsilon}} \frac{\partial L}{\partial w}
-\]</div>
-<p>where <span class="arithmatex">\( G_t \)</span> is the sum of squared gradients and <span class="arithmatex">\( \epsilon \)</span> is a small constant.</p>
-<p><strong>Advantages</strong>:
-  - Works well for sparse data.</p>
-<p><strong>Disadvantages</strong>:
-  - Learning rate may become too small over time.</p>
 <hr />
 <h4 id="7-rmsprop">7. <strong>RMSProp</strong></h4>
 <ul>
 <li><strong>Description</strong>: Modifies Adagrad by using an exponentially decaying average of squared gradients.</li>
-<li><strong>Update Rule</strong>:</li>
-</ul>
-<div class="arithmatex">\[
-G_t = \beta G_{t-1} + (1 - \beta) \frac{\partial L}{\partial w}^2
-\]</div>
-<div class="arithmatex">\[
-w \gets w - \frac{\eta}{\sqrt{G_t + \epsilon}} \frac{\partial L}{\partial w}
-\]</div>
-<p>where <span class="arithmatex">\( \beta \)</span> is the decay rate.</p>
+<li>
+<p><strong>Update Rule</strong>:
+  [
+  G_t = \beta G_{t-1} + (1 - \beta) \frac{\partial L}{\partial w}^2
+  ]
+  [
+  w \gets w - \frac{\eta}{\sqrt{G_t + \epsilon}} \frac{\partial L}{\partial w}
+  ]
+  where <span class="arithmatex">\( \beta \)</span> is the decay rate.</p>
+</li>
+<li>
 <p><strong>Advantages</strong>:</p>
-<ul>
+</li>
 <li>Suitable for non-stationary objectives.</li>
 <li>Prevents learning rates from becoming too small.</li>
 </ul>
@@ -1293,21 +1341,23 @@ w \gets w - \frac{\eta}{\sqrt{G_t + \epsilon}} \frac{\partial L}{\partial w}
 <h4 id="8-adam-adaptive-moment-estimation">8. <strong>Adam (Adaptive Moment Estimation)</strong></h4>
 <ul>
 <li><strong>Description</strong>: Combines Momentum and RMSProp by maintaining both moving averages of gradients and their squared values.</li>
-<li><strong>Update Rule</strong>:</li>
-</ul>
-<div class="arithmatex">\[
-m_t = \beta_1 m_{t-1} + (1 - \beta_1) \frac{\partial L}{\partial w}
-\]</div>
-<div class="arithmatex">\[
-v_t = \beta_2 v_{t-1} + (1 - \beta_2) \left( \frac{\partial L}{\partial w} \right)^2
-\]</div>
-<div class="arithmatex">\[
-w \gets w - \frac{\eta}{\sqrt{\hat{v}_t} + \epsilon} \hat{m}_t
-\]</div>
-<p>where:
-  - <span class="arithmatex">\( \hat{m}_t \)</span> and <span class="arithmatex">\( \hat{v}_t \)</span> are bias-corrected estimates of <span class="arithmatex">\( m_t \)</span> and <span class="arithmatex">\( v_t \)</span>.</p>
+<li><strong>Update Rule</strong>:
+  [
+  m_t = \beta_1 m_{t-1} + (1 - \beta_1) \frac{\partial L}{\partial w}
+  ]
+  [
+  v_t = \beta_2 v_{t-1} + (1 - \beta_2) \left( \frac{\partial L}{\partial w} \right)^2
+  ]
+  [
+  w \gets w - \frac{\eta}{\sqrt{\hat{v}_t} + \epsilon} \hat{m}_t
+  ]
+  where:</li>
+<li>
+<p><span class="arithmatex">\( \hat{m}_t \)</span> and <span class="arithmatex">\( \hat{v}_t \)</span> are bias-corrected estimates of <span class="arithmatex">\( m_t \)</span> and <span class="arithmatex">\( v_t \)</span>.</p>
+</li>
+<li>
 <p><strong>Advantages</strong>:</p>
-<ul>
+</li>
 <li>Works well for most problems.</li>
 <li>Combines benefits of Momentum and RMSProp.</li>
 </ul>
@@ -1409,11 +1459,11 @@ w \gets w - \frac{\eta}{\sqrt{\hat{v}_t} + \epsilon} \hat{m}_t
 <hr />
 <h3 id="diagram-optimization-workflow"><strong>Diagram: Optimization Workflow</strong></h3>
 <pre class="mermaid"><code>graph TD
-    A[Initialize Weights and Biases] --&gt; B[Compute Gradients]
+    A[Initialize Weights and Biases] --&gt; B[Compute Gradients (Backpropagation)]
     B --&gt; C[Update Weights Using Optimization Rule]
     C --&gt; D[Check Stopping Condition]
     D --&gt;|Condition Met| E[End]
-    D --&gt;|Condition Not Met| B[Compute Gradients]</code></pre>
+    D --&gt;|Condition Not Met| B</code></pre>
 <hr />
 <h3 id="conclusion"><strong>Conclusion</strong></h3>
 <p>Optimization algorithms are the backbone of neural network training. Choosing the right algorithm depends on the problem, data size, and desired computational efficiency. Among all, <strong>Adam</strong> is the most widely used due to its adaptive nature and robustness.</p>

@@ -893,6 +893,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CNN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Convolutional Neural Networks (CNN) - A Detailed Explanation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1128,50 +1149,48 @@ a_j^{(l)} = \sigma(z_j^{(l)})
 </li>
 </ul>
 <h4 id="2-loss-function"><strong>2. Loss Function</strong></h4>
-<p>The loss function measures the error. For example, Mean Squared Error:</p>
-<div class="arithmatex">\[
+<p>The loss function measures the error. For example, Mean Squared Error:
+[
 L = \frac{1}{2} \sum (y - \hat{y})^2
-\]</div>
-<p>where:</p>
-<ul>
-<li><span class="arithmatex">\( y \)</span>: Actual output.</li>
-<li><span class="arithmatex">\( \hat{y} \)</span>: Predicted output.</li>
-</ul>
+]
+where:
+- <span class="arithmatex">\( y \)</span>: Actual output.
+- <span class="arithmatex">\( \hat{y} \)</span>: Predicted output.</p>
 <h4 id="3-backward-pass"><strong>3. Backward Pass</strong></h4>
 <p>Using the chain rule, the gradient of the loss <span class="arithmatex">\( L \)</span> with respect to a weight <span class="arithmatex">\( w \)</span> is computed:</p>
 <ul>
-<li>Error at output layer:</li>
-</ul>
-<div class="arithmatex">\[
-\delta_j^{(L)} = \frac{\partial L}{\partial a_j^{(L)}} \cdot \sigma'(z_j^{(L)})
-\]</div>
-<p>where <span class="arithmatex">\( \sigma'(z_j^{(L)}) \)</span> is the derivative of the activation function.</p>
-<ul>
 <li>
-<p>Error at hidden layer:</p>
-<div class="arithmatex">\[
-\delta_j^{(l)} = \left( \sum_k w_{kj}^{(l+1)} \delta_k^{(l+1)} \right) \cdot \sigma'(z_j^{(l)})
-\]</div>
+<p>Error at output layer:
+  [
+  \delta_j^{(L)} = \frac{\partial L}{\partial a_j^{(L)}} \cdot \sigma'(z_j^{(L)})
+  ]
+  where <span class="arithmatex">\( \sigma'(z_j^{(L)}) \)</span> is the derivative of the activation function.</p>
 </li>
 <li>
-<p>Gradients for weights and biases:</p>
-<div class="arithmatex">\[
-\frac{\partial L}{\partial w_{ji}^{(l)}} = \delta_j^{(l)} a_i^{(l-1)}
-\]</div>
-<div class="arithmatex">\[
-\frac{\partial L}{\partial b_j^{(l)}} = \delta_j^{(l)}
-\]</div>
+<p>Error at hidden layer:
+  [
+  \delta_j^{(l)} = \left( \sum_k w_{kj}^{(l+1)} \delta_k^{(l+1)} \right) \cdot \sigma'(z_j^{(l)})
+  ]</p>
+</li>
+<li>
+<p>Gradients for weights and biases:
+  [
+  \frac{\partial L}{\partial w_{ji}^{(l)}} = \delta_j^{(l)} a_i^{(l-1)}
+  ]
+  [
+  \frac{\partial L}{\partial b_j^{(l)}} = \delta_j^{(l)}
+  ]</p>
 </li>
 </ul>
 <h4 id="4-weight-update-rule"><strong>4. Weight Update Rule</strong></h4>
-<p>Weights and biases are updated using gradient descent:</p>
-<div class="arithmatex">\[
+<p>Weights and biases are updated using gradient descent:
+[
 w_{ji}^{(l)} \gets w_{ji}^{(l)} - \eta \frac{\partial L}{\partial w_{ji}^{(l)}}
-\]</div>
-<div class="arithmatex">\[
+]
+[
 b_j^{(l)} \gets b_j^{(l)} - \eta \frac{\partial L}{\partial b_j^{(l)}}
-\]</div>
-<p>where <span class="arithmatex">\( \eta \)</span> is the learning rate.</p>
+]
+where <span class="arithmatex">\( \eta \)</span> is the learning rate.</p>
 <hr />
 <h3 id="code-example-backpropagation-in-python"><strong>Code Example: Backpropagation in Python</strong></h3>
 <p>Here’s a simple implementation of backpropagation for a neural network with one hidden layer:</p>
