@@ -44,10 +44,13 @@ where:
 #### **2. Loss Function**
 
 The loss function measures the error. For example, Mean Squared Error:
+
 \[
 L = \frac{1}{2} \sum (y - \hat{y})^2
 \]
+
 where:
+
 - \( y \): Actual output.
 - \( \hat{y} \): Predicted output.
 
@@ -56,33 +59,41 @@ where:
 Using the chain rule, the gradient of the loss \( L \) with respect to a weight \( w \) is computed:
 
 - Error at output layer:
-  \[
-  \delta_j^{(L)} = \frac{\partial L}{\partial a_j^{(L)}} \cdot \sigma'(z_j^{(L)})
-  \]
+
+\[
+\delta_j^{(L)} = \frac{\partial L}{\partial a_j^{(L)}} \cdot \sigma'(z_j^{(L)})
+\]
+
   where \( \sigma'(z_j^{(L)}) \) is the derivative of the activation function.
 
 - Error at hidden layer:
-  \[
-  \delta_j^{(l)} = \left( \sum_k w_{kj}^{(l+1)} \delta_k^{(l+1)} \right) \cdot \sigma'(z_j^{(l)})
-  \]
+
+    \[
+    \delta_j^{(l)} = \left( \sum_k w_{kj}^{(l+1)} \delta_k^{(l+1)} \right) \cdot \sigma'(z_j^{(l)})
+    \]
 
 - Gradients for weights and biases:
-  \[
-  \frac{\partial L}{\partial w_{ji}^{(l)}} = \delta_j^{(l)} a_i^{(l-1)}
-  \]
-  \[
-  \frac{\partial L}{\partial b_j^{(l)}} = \delta_j^{(l)}
-  \]
+
+    \[
+    \frac{\partial L}{\partial w_{ji}^{(l)}} = \delta_j^{(l)} a_i^{(l-1)}
+    \]
+
+    \[
+    \frac{\partial L}{\partial b_j^{(l)}} = \delta_j^{(l)}
+    \]
 
 #### **4. Weight Update Rule**
 
 Weights and biases are updated using gradient descent:
+
 \[
 w_{ji}^{(l)} \gets w_{ji}^{(l)} - \eta \frac{\partial L}{\partial w_{ji}^{(l)}}
 \]
+
 \[
 b_j^{(l)} \gets b_j^{(l)} - \eta \frac{\partial L}{\partial b_j^{(l)}}
 \]
+
 where \( \eta \) is the learning rate.
 
 ---
