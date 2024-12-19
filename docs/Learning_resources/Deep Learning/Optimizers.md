@@ -14,17 +14,24 @@ These algorithms rely on **gradients** to optimize the loss function. Gradients 
 
 - **Description**: Updates the weights by calculating the gradient of the loss function for the entire training dataset.
 - **Update Rule**:
-  \[
-  w \gets w - \eta \frac{\partial L}{\partial w}
-  \]
+
+\[
+w \gets w - \eta \frac{\partial L}{\partial w}
+\]
+
   where:
+
   - \( \eta \): Learning rate.
   - \( \frac{\partial L}{\partial w} \): Gradient of the loss \( L \) with respect to \( w \).
 
-- **Advantages**:
+<br>
+
+**Advantages**:
+
   - Simple and effective for convex functions.
 
-- **Disadvantages**:
+**Disadvantages**:
+
   - Computationally expensive for large datasets.
   - Requires the entire dataset for each update.
 
@@ -34,16 +41,20 @@ These algorithms rely on **gradients** to optimize the loss function. Gradients 
 
 - **Description**: Updates the weights using a single randomly selected training example at each step.
 - **Update Rule**:
-  \[
-  w \gets w - \eta \frac{\partial L_i}{\partial w}
-  \]
+
+    \[
+    w \gets w - \eta \frac{\partial L_i}{\partial w}
+    \]
+
   where \( L_i \) is the loss for a single data point.
 
-- **Advantages**:
+**Advantages**:
+
   - Faster updates.
   - Can escape local minima due to randomness.
 
-- **Disadvantages**:
+**Disadvantages**:
+
   - High variance in updates, leading to noisy convergence.
 
 ---
@@ -52,17 +63,19 @@ These algorithms rely on **gradients** to optimize the loss function. Gradients 
 
 - **Description**: Combines the advantages of GD and SGD by using small batches of data for each update.
 - **Update Rule**:
-  \[
-  w \gets w - \eta \frac{1}{m} \sum_{i=1}^{m} \frac{\partial L_i}{\partial w}
-  \]
+
+\[
+w \gets w - \eta \frac{1}{m} \sum_{i=1}^{m} \frac{\partial L_i}{\partial w}
+\]
+
   where \( m \) is the batch size.
 
-- **Advantages**:
-  - Faster convergence than GD.
-  - Reduces noise compared to SGD.
+**Advantages**:
+    - Faster convergence than GD.
+    - Reduces noise compared to SGD.
 
-- **Disadvantages**:
-  - Requires tuning the batch size.
+**Disadvantages**:
+    - Requires tuning the batch size.
 
 ---
 
@@ -70,15 +83,19 @@ These algorithms rely on **gradients** to optimize the loss function. Gradients 
 
 - **Description**: Adds a fraction of the previous update to the current update to accelerate convergence.
 - **Update Rule**:
-  \[
-  v_t = \gamma v_{t-1} + \eta \frac{\partial L}{\partial w}
-  \]
-  \[
-  w \gets w - v_t
-  \]
+
+\[
+v_t = \gamma v_{t-1} + \eta \frac{\partial L}{\partial w}
+\]
+
+\[
+w \gets w - v_t
+\]
+
   where \( \gamma \) is the momentum factor (e.g., 0.9).
 
-- **Advantages**:
+**Advantages**:
+
   - Speeds up convergence in directions with consistent gradients.
   - Reduces oscillations.
 
@@ -88,14 +105,16 @@ These algorithms rely on **gradients** to optimize the loss function. Gradients 
 
 - **Description**: A variation of Momentum that computes the gradient at the approximate future position of the parameters.
 - **Update Rule**:
-  \[
-  v_t = \gamma v_{t-1} + \eta \frac{\partial L}{\partial w_t - \gamma v_{t-1}}
-  \]
-  \[
-  w \gets w - v_t
-  \]
 
-- **Advantages**:
+\[
+v_t = \gamma v_{t-1} + \eta \frac{\partial L}{\partial w_t - \gamma v_{t-1}}
+\]
+
+\[
+w \gets w - v_t
+\]
+
+**Advantages**:
   - Faster convergence than Momentum.
 
 ---
@@ -104,15 +123,17 @@ These algorithms rely on **gradients** to optimize the loss function. Gradients 
 
 - **Description**: Adapts the learning rate for each parameter based on the sum of squared gradients.
 - **Update Rule**:
-  \[
-  w \gets w - \frac{\eta}{\sqrt{G_t + \epsilon}} \frac{\partial L}{\partial w}
-  \]
+
+\[
+w \gets w - \frac{\eta}{\sqrt{G_t + \epsilon}} \frac{\partial L}{\partial w}
+\]
+
   where \( G_t \) is the sum of squared gradients and \( \epsilon \) is a small constant.
 
-- **Advantages**:
+**Advantages**:
   - Works well for sparse data.
 
-- **Disadvantages**:
+**Disadvantages**:
   - Learning rate may become too small over time.
 
 ---
@@ -121,15 +142,19 @@ These algorithms rely on **gradients** to optimize the loss function. Gradients 
 
 - **Description**: Modifies Adagrad by using an exponentially decaying average of squared gradients.
 - **Update Rule**:
-  \[
-  G_t = \beta G_{t-1} + (1 - \beta) \frac{\partial L}{\partial w}^2
-  \]
-  \[
-  w \gets w - \frac{\eta}{\sqrt{G_t + \epsilon}} \frac{\partial L}{\partial w}
-  \]
+
+\[
+G_t = \beta G_{t-1} + (1 - \beta) \frac{\partial L}{\partial w}^2
+\]
+
+\[
+w \gets w - \frac{\eta}{\sqrt{G_t + \epsilon}} \frac{\partial L}{\partial w}
+\]
+
   where \( \beta \) is the decay rate.
 
-- **Advantages**:
+**Advantages**:
+
   - Suitable for non-stationary objectives.
   - Prevents learning rates from becoming too small.
 
@@ -139,19 +164,24 @@ These algorithms rely on **gradients** to optimize the loss function. Gradients 
 
 - **Description**: Combines Momentum and RMSProp by maintaining both moving averages of gradients and their squared values.
 - **Update Rule**:
-  \[
-  m_t = \beta_1 m_{t-1} + (1 - \beta_1) \frac{\partial L}{\partial w}
-  \]
-  \[
-  v_t = \beta_2 v_{t-1} + (1 - \beta_2) \left( \frac{\partial L}{\partial w} \right)^2
-  \]
-  \[
-  w \gets w - \frac{\eta}{\sqrt{\hat{v}_t} + \epsilon} \hat{m}_t
-  \]
+
+\[
+m_t = \beta_1 m_{t-1} + (1 - \beta_1) \frac{\partial L}{\partial w}
+\]
+
+\[
+v_t = \beta_2 v_{t-1} + (1 - \beta_2) \left( \frac{\partial L}{\partial w} \right)^2
+\]
+
+\[
+w \gets w - \frac{\eta}{\sqrt{\hat{v}_t} + \epsilon} \hat{m}_t
+\]
+
   where:
   - \( \hat{m}_t \) and \( \hat{v}_t \) are bias-corrected estimates of \( m_t \) and \( v_t \).
 
-- **Advantages**:
+**Advantages**:
+
   - Works well for most problems.
   - Combines benefits of Momentum and RMSProp.
 
@@ -211,11 +241,11 @@ for epoch in range(100):
 
 ```mermaid
 graph TD
-    A[Initialize Weights and Biases] --> B[Compute Gradients (Backpropagation)]
+    A[Initialize Weights and Biases] --> B[Compute Gradients]
     B --> C[Update Weights Using Optimization Rule]
     C --> D[Check Stopping Condition]
     D -->|Condition Met| E[End]
-    D -->|Condition Not Met| B
+    D -->|Condition Not Met| B[Compute Gradients]
 ```
 
 ---
