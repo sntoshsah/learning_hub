@@ -63,6 +63,9 @@ nav:
       - Learning_resources/Machine Learning/Clustering.md
     - Deep Learning:
       - Learning_resources/Deep Learning/Neural_Network.md
+      - Learning_resources/Deep Learning/Backpropagation.md
+      - Learning_resources/Deep Learning/Optimizers.md
+
 
 
   - Blog: blog.md
