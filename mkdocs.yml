@@ -66,6 +66,17 @@ nav:
       - Learning_resources/Deep Learning/Backpropagation.md
       - Learning_resources/Deep Learning/Optimizers.md
       - Learning_resources/Deep Learning/CNN.md
+    - Data Science:
+      - Learning_resources/Data Science/Statistics/Intro_to_Statistics.md
+      - Learning_resources/Data Science/Statistics/probability.md
+      - Learning_resources/Data Science/Statistics/Data_distribution.md
+      - Learning_resources/Data Science/Statistics/correlation_and_experiment_design.md
+      - Learning_resources/Data Science/Statistics/Hypothesis_testing.md
+      - Learning_resources/Data Science/Statistics/Adv_Hypothesis_testing.md
+      - Learning_resources/Data Science/Statistics/Hypothesis_testing_with_proportions.md
+      - Learning_resources/Data Science/Statistics/Non_Parametric_test.md
+
+
 
 
 
