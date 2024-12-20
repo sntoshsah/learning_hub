@@ -1,0 +1,39 @@
+name: MkDocs CI/CD
+
+on:
+  # Trigger the workflow on pushes to the main branch
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Python
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+
+      # Step 3: Install Dependencies
+      - name: Install Dependencies
+        run: |
+          pip install mkdocs mkdocs-material
+          pip install -r requirement.txt
+
+      # Step 4: Build MkDocs Site
+      - name: Build MkDocs Site
+        run: mkdocs build
+
+      # Step 5: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: site
