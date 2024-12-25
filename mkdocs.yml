@@ -57,6 +57,23 @@ nav:
       - Learning_resources/Python/Python_Basics.md
       - Learning_resources/Python/Conditions_and_Loops.md
       - Learning_resources/Python/strings.md
+      - Learning_resources/Python/List.md
+      - Learning_resources/Python/Tuples.md
+      - Learning_resources/Python/Sets.md
+      - Learning_resources/Python/Dict.md
+      - Learning_resources/Python/Functions.md
+      - Learning_resources/Python/File_Handling.md
+      - Learning_resources/Python/Exception_Handling.md
+      - Learning_resources/Python/Methods.md
+      - Learning_resources/Python/Decorators.md
+      - Learning_resources/Python/Iterator_Generator_Duck_Typing.md
+      - Learning_resources/Python/Functions_2.md
+
+
+
+
+
+
 
       
     - Machine Learning Algorithms and Concepts:
