@@ -78,15 +78,6 @@ nav:
       - Learning_resources/Python/Encapsulation.md
       - Learning_resources/Python/Constructors.md
       - Learning_resources/Python/Data_Member.md
-
-
-
-
-
-
-
-
-
       
     - Machine Learning Algorithms and Concepts:
       - Learning_resources/Machine Learning/ML_basics.md
@@ -107,9 +98,15 @@ nav:
       - Learning_resources/Data Science/Statistics/Adv_Hypothesis_testing.md
       - Learning_resources/Data Science/Statistics/Hypothesis_testing_with_proportions.md
       - Learning_resources/Data Science/Statistics/Non_Parametric_test.md
-
-
-
+  - Mathematics:
+      - Learning_resources/Mathematics/Calculus/Functions_on_One_Variable.md
+      - Learning_resources/Mathematics/Calculus/Limit_And_Continuity.md
+      - Learning_resources/Mathematics/Calculus/Derivative.md
+      - Learning_resources/Mathematics/Calculus/Application_Of_Derivative.md
+      - Learning_resources/Mathematics/Calculus/Integration.md
+      - Learning_resources/Mathematics/Calculus/Integration Techniques.md
+      - Learning_resources/Mathematics/Calculus/Application of antiderivatives.md
+      - Learning_resources/Mathematics/Calculus/Ordinary differential Equations.md
 
 
 
@@ -121,6 +118,7 @@ plugins:
   - awesome-pages
   - mkdocs-jupyter
   - markdown-exec
+  - glightbox
 markdown_extensions:
 - pymdownx.superfences:
     custom_fences:
@@ -130,6 +128,10 @@ markdown_extensions:
 
 - pymdownx.arithmatex:
     generic: true
+
+- attr_list
+- md_in_html
+- pymdownx.blocks.caption
 
 extra_javascript:
   - javascripts/mathjax.js
