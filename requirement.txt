@@ -122,3 +122,4 @@ widgetsnbextension==4.0.13
 numpy
 matplotlib
 seaborn
+mkdocs-glightbox
