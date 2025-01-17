@@ -37,6 +37,7 @@ Before diving into advanced techniques, understanding the basic rules is essenti
 ## 2. **Substitution Method**
 
 The substitution method simplifies integrals by transforming the variable:
+
 - **Steps:**
   1. Identify a substitution \( u = g(x) \).
   2. Compute \( du = g'(x) dx \).
@@ -44,18 +45,21 @@ The substitution method simplifies integrals by transforming the variable:
   4. Integrate with respect to \( u \) and substitute back.
 
 - **Example:**
-  \[
-  \int x e^{x^2} dx \quad \text{Let } u = x^2, \; du = 2x dx.
-  \]
-  \[
-  \int x e^{x^2} dx = \frac{1}{2} \int e^u du = \frac{1}{2} e^u + C = \frac{1}{2} e^{x^2} + C.
-  \]
+
+\[
+\int x e^{x^2} dx \quad \text{Let } u = x^2, \; du = 2x dx.
+\]
+
+\[
+\int x e^{x^2} dx = \frac{1}{2} \int e^u du = \frac{1}{2} e^u + C = \frac{1}{2} e^{x^2} + C.
+\]
 
 ---
 
 ## 3. **Integration by Parts**
 
 Integration by parts is based on the product rule of differentiation:
+
 \[
 \int u \cdot v' dx = uv - \int u' \cdot v dx.
 \]

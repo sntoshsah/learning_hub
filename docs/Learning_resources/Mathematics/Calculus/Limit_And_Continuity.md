@@ -148,7 +148,7 @@ At extreme values of \( x \), the function stabilizes around a constant value \(
 2. Horizontal asymptote: \( y = 0 \).
 
 ### Python Visualization:
-```python exec="on"
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 

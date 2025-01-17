@@ -106,6 +106,7 @@ This theorem bridges differentiation and integration:
 
 ### Example
 Verify the fundamental theorem for \( f(x) = x^2 \) over \([0, 2]\):
+
 \[
 F(x) = \frac{x^3}{3}, \quad \int_0^2 x^2 \, dx = \frac{2^3}{3} - \frac{0^3}{3} = \frac{8}{3}.
 \]

@@ -98,7 +98,8 @@ nav:
       - Learning_resources/Data Science/Statistics/Adv_Hypothesis_testing.md
       - Learning_resources/Data Science/Statistics/Hypothesis_testing_with_proportions.md
       - Learning_resources/Data Science/Statistics/Non_Parametric_test.md
-  - Mathematics:
+
+    - Mathematics:
       - Learning_resources/Mathematics/Calculus/Functions_on_One_Variable.md
       - Learning_resources/Mathematics/Calculus/Limit_And_Continuity.md
       - Learning_resources/Mathematics/Calculus/Derivative.md
@@ -110,6 +111,8 @@ nav:
       - Learning_resources/Mathematics/Calculus/Infinite Sequence and Series.md
       - Learning_resources/Mathematics/Calculus/Plane and Space Vectors.md
       - Learning_resources/Mathematics/Calculus/Partial Derivatives and Multiple Integrals.md
+    - DBMS:
+      - Learning_resources/Data Science/Normalization.md
 
 
 
