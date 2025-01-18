@@ -100,17 +100,30 @@ nav:
       - Learning_resources/Data Science/Statistics/Non_Parametric_test.md
 
     - Mathematics:
-      - Learning_resources/Mathematics/Calculus/Functions_on_One_Variable.md
-      - Learning_resources/Mathematics/Calculus/Limit_And_Continuity.md
-      - Learning_resources/Mathematics/Calculus/Derivative.md
-      - Learning_resources/Mathematics/Calculus/Application_Of_Derivative.md
-      - Learning_resources/Mathematics/Calculus/Integration.md
-      - Learning_resources/Mathematics/Calculus/Integration Techniques.md
-      - Learning_resources/Mathematics/Calculus/Application of antiderivatives.md
-      - Learning_resources/Mathematics/Calculus/Ordinary differential Equations.md
-      - Learning_resources/Mathematics/Calculus/Infinite Sequence and Series.md
-      - Learning_resources/Mathematics/Calculus/Plane and Space Vectors.md
-      - Learning_resources/Mathematics/Calculus/Partial Derivatives and Multiple Integrals.md
+      - Calculus:
+        - Learning_resources/Mathematics/Calculus/Functions_on_One_Variable.md
+        - Learning_resources/Mathematics/Calculus/Limit_And_Continuity.md
+        - Learning_resources/Mathematics/Calculus/Derivative.md
+        - Learning_resources/Mathematics/Calculus/Application_Of_Derivative.md
+        - Learning_resources/Mathematics/Calculus/Integration.md
+        - Learning_resources/Mathematics/Calculus/Integration Techniques.md
+        - Learning_resources/Mathematics/Calculus/Application of antiderivatives.md
+        - Learning_resources/Mathematics/Calculus/Ordinary differential Equations.md
+        - Learning_resources/Mathematics/Calculus/Infinite Sequence and Series.md
+        - Learning_resources/Mathematics/Calculus/Plane and Space Vectors.md
+        - Learning_resources/Mathematics/Calculus/Partial Derivatives and Multiple Integrals.md
+      - Linear Algebra:
+        - Learning_resources/Mathematics/Linear Algebra/Linear Equations in Linear Algebra.md
+        - Learning_resources/Mathematics/Linear Algebra/Transformations.md
+        - Learning_resources/Mathematics/Linear Algebra/Matrix Algebra.md
+        - Learning_resources/Mathematics/Linear Algebra/Determinants.md
+        - Learning_resources/Mathematics/Linear Algebra/Vector Spaces.md
+        - Learning_resources/Mathematics/Linear Algebra/Vector Spaces2.md
+        - Learning_resources/Mathematics/Linear Algebra/Vector Spaces Continued.md
+        - Learning_resources/Mathematics/Linear Algebra/Eigenvalues and Eigenvectors.md
+        - Learning_resources/Mathematics/Linear Algebra/Orthogonality and Least Squares.md
+        - Learning_resources/Mathematics/Linear Algebra/Ring and Field.md
+
     - DBMS:
       - Learning_resources/Data Science/Normalization.md
 
