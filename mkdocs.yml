@@ -126,10 +126,13 @@ nav:
 
     - DBMS:
       - Learning_resources/Data Science/Normalization.md
+      - Learning_resources/Data Science/MySQL.md
 
 
+    - Blog:
+      - Learning_resources/Blog/Docker.md
 
-  - Blog: blog.md
+
   - Contact: contact.md
 
 plugins:
