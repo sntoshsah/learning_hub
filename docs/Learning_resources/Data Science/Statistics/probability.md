@@ -127,6 +127,7 @@ This will simulate 1000 rolls of a fair die, with each number having an equal ch
 
 ### Expected Value
 - **Definition**: The expected value (or mean) of a probability distribution is the average value that would be obtained from a large number of trials. The expected value for a fair die roll is calculated as:
+
 \[
 \text{Expected value} = \frac{1}{6} \times (1 + 2 + 3 + 4 + 5 + 6) = 3.5
 \]

@@ -1,6 +1,3 @@
-
-
-
 # MySQL Documentation
 
 Welcome to the MySQL Documentation! This guide is designed to help you master MySQL, including installation, basic commands, advanced queries, and administration tasks.

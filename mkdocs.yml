@@ -131,6 +131,7 @@ nav:
 
     - Blog:
       - Learning_resources/Blog/Docker.md
+      - Learning_resources/Blog/Linux_Commands.md
 
 
   - Contact: contact.md

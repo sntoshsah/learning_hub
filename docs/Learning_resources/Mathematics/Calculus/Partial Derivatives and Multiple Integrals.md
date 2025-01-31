@@ -13,6 +13,7 @@ For a multivariable function \( f(x, y) \), the **limit** as \( (x, y) \to (a, b
 if \( f(x, y) \) approaches \( L \) from all directions.
 
 A function is **continuous** at \( (a, b) \) if:
+
 1. \( f(a, b) \) is defined.
 2. \( \lim_{(x, y) \to (a, b)} f(x, y) \) exists.
 3. \( \lim_{(x, y) \to (a, b)} f(x, y) = f(a, b) \).
@@ -187,16 +188,14 @@ where \( R \) is the rectangle defined by \( 0 \leq x \leq 2 \) and \( 0 \leq y 
 \]
 
 1. Integrate with respect to \( y \):
-
-\[
-\int_0^3 (x + y) \ dy = \left[ xy + \frac{y^2}{2} \right]_0^3 = 3x + \frac{9}{2}
-\]
+    \(
+    \int_0^3 (x + y) \ dy = \left[ xy + \frac{y^2}{2} \right]_0^3 = 3x + \frac{9}{2}
+    \)
 
 2. Integrate with respect to \( x \):
-
-\[
+\(
 \int_0^2 \left( 3x + \frac{9}{2} \right) \ dx = \left[ \frac{3x^2}{2} + \frac{9x}{2} \right]_0^2 = \frac{12}{2} + \frac{18}{2} = 15
-\]
+\)
 
 Thus, the value of the integral is \( 15 \).
 
@@ -230,22 +229,19 @@ where \( V \) is the cuboid defined by \( 0 \leq x \leq 1 \), \( 0 \leq y \leq 2
 \]
 
 1. Integrate with respect to \( z \):
-
-\[
+\(
 \int_0^3 xyz \ dz = xyz \left[ z \right]_0^3 = 3xyz
-\]
+\)
 
 2. Integrate with respect to \( y \):
-
-\[
+\(
 \int_0^2 3xyz \ dy = 3x \int_0^2 y \ dy = 3x \left[ \frac{y^2}{2} \right]_0^2 = 3x \cdot 2 = 6x
-\]
+\)
 
 3. Integrate with respect to \( x \):
-
-\[
+\(
 \int_0^1 6x \ dx = \left[ 3x^2 \right]_0^1 = 3
-\]
+\)
 
 Thus, the value of the integral is \( 3 \).
 

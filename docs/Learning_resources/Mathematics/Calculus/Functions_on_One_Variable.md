@@ -59,6 +59,7 @@ Create a linear model for a car traveling at a constant speed of 60 km/h.
 Let \( x \) represent time (in hours) and \( y \) represent the distance traveled (in km).
 
 The relationship can be modeled as:
+
 \[ y = 60x \]
 
 #### Graphical Representation:
@@ -96,8 +97,7 @@ The composition \( (f \circ g)(x) \) is defined as:
 1. **Addition**: \( (f + g)(x) = (2x + 3) + (x^2) = x^2 + 2x + 3 \)
 2. **Subtraction**: \( (f - g)(x) = (2x + 3) - (x^2) = -x^2 + 2x + 3 \)
 3. **Multiplication**: \( (f \cdot g)(x) = (2x + 3)(x^2) = 2x^3 + 3x^2 \)
-4. **Composition**:
-   \[ (f \circ g)(x) = f(g(x)) = f(x^2) = 2(x^2) + 3 = 2x^2 + 3 \]
+4. **Composition**: \( (f \circ g)(x) = f(g(x)) = f(x^2) = 2(x^2) + 3 = 2x^2 + 3 \)
 
 ---
 

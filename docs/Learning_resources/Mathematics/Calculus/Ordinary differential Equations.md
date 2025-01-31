@@ -162,8 +162,9 @@ ay'' + by' + cy = G(x).
 \]
 
 The solution is:
+
 \[
-y = y_h + y_p,
+y = y_h + y_p
 \]
 
 where:

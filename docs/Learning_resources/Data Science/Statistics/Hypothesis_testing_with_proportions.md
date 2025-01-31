@@ -96,9 +96,10 @@ Where:
 - \(\hat{p}_1, \hat{p}_2\): Sample proportions.
 - \(n_1, n_2\): Sample sizes.
 - \(p\): Pooled proportion:
-  \[
-  p = \frac{x_1 + x_2}{n_1 + n_2}
-  \]
+
+\[
+p = \frac{x_1 + x_2}{n_1 + n_2}
+\]
 
 ### Python Code Example
 ```python

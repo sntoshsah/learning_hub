@@ -14,7 +14,7 @@ A **subspace** is a subset of a vector space that is itself a vector space under
 
 ### Key Concepts
 
-- **Vector Space**: A set \( V \) with operations addition and scalar multiplication such that:
+**Vector Space**: A set \( V \) with operations addition and scalar multiplication such that:
 
   1. Closure under addition and scalar multiplication.
   2. Existence of a zero vector.
@@ -22,7 +22,7 @@ A **subspace** is a subset of a vector space that is itself a vector space under
   4. Associativity and commutativity of addition.
   5. Distributive properties.
 
-- **Subspace Criteria**:
+**Subspace Criteria**:
 
   1. The zero vector is in the subset.
   2. Closed under vector addition.

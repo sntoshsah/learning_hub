@@ -123,9 +123,9 @@ Coordinates represent a vector relative to a basis.
 Given basis \( \{(1, 2), (3, 4)\} \), find coordinates of \( \mathbf{v} = (7, 10) \).
 
 **Solution:**
-Solve \( c_1(1, 2) + c_2(3, 4) = (7, 10) \):
 
-\[ c_1 = 2, \, c_2 = 1 \]
+Solve \( c_1(1, 2) + c_2(3, 4) = (7, 10) \):    \( c_1 = 2, \, c_2 = 1 \)
+
 Coordinates: \( (2, 1) \).
 
 ---

@@ -36,12 +36,14 @@ The **rank** of a matrix is the dimension of its column space (or row space), re
 1. For \(
 A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix}
 \):
-   - Row-reduce to find the rank is 2.
+
+      Row-reduce to find the rank is 2.
 
 2. For \(
 B = \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}
 \):
-   - Row-reduce to find the rank is 3.
+
+      Row-reduce to find the rank is 3.
 
 ### Tips and Tricks
 1. A square matrix is invertible if and only if \( \text{rank}(A) = n \), where \( n \) is the size of the matrix.
@@ -73,15 +75,13 @@ Transform coordinates from the standard basis \( B_s = \{(1, 0), (0, 1)\} \) to 
 
 #### Solution
 1. Write \( B \) in terms of \( B_s \):
-\[
+\(
 P = \begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}
-\]
+\)
 
-2. For a vector \( v = \begin{bmatrix} 3 \\ 1 \end{bmatrix} \), compute:\
+2. For a vector \( v = \begin{bmatrix} 3 \\ 1 \end{bmatrix} \), 
 
-\[
-P^{-1} v = \begin{bmatrix} 0.5 & 0.5 \\ 0.5 & -0.5 \end{bmatrix} \begin{bmatrix} 3 \\ 1 \end{bmatrix} = \begin{bmatrix} 2 \end{bmatrix}
-\]
+      compute:\(P^{-1} v = \begin{bmatrix} 0.5 & 0.5 \\ 0.5 & -0.5 \end{bmatrix} \begin{bmatrix} 3 \\ 1 \end{bmatrix} = \begin{bmatrix} 2 \end{bmatrix}\)
 
 ---
 
