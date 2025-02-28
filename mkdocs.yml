@@ -132,6 +132,7 @@ nav:
     - Blog:
       - Learning_resources/Blog/Docker.md
       - Learning_resources/Blog/Linux_Commands.md
+      - Learning_resources/Blog/Alembic.md
 
 
   - Contact: contact.md
