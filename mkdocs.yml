@@ -125,8 +125,10 @@ nav:
         - Learning_resources/Mathematics/Linear Algebra/Ring and Field.md
 
     - DBMS:
-      - Learning_resources/Data Science/Normalization.md
-      - Learning_resources/Data Science/MySQL.md
+      - Learning_resources/Data Science/DBMS/Normalization.md
+      - Learning_resources/Data Science/DBMS/MySQL.md
+      - Learning_resources/Data Science/DBMS/POSTGRESQL.md
+
 
 
     - Blog:

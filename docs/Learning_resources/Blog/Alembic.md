@@ -10,7 +10,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install alembic sqlalchemy
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## 📌 Step 2: Initialize Alembic
 
@@ -19,10 +19,11 @@ alembic init alembic
 ```
 
 This creates:
+
 - `alembic/` (migrations folder)
 - `alembic.ini` (config file)
 
----
+--------------------------------------------------------------------------------
 
 ## 📌 Step 3: Configure Alembic for SQLite
 
@@ -34,7 +35,7 @@ sqlalchemy.url = sqlite:///test.db
 
 This sets up an SQLite database file named `test.db`.
 
----
+--------------------------------------------------------------------------------
 
 ## 📌 Step 4: Create a SQLAlchemy Model
 
@@ -53,7 +54,7 @@ class User(Base):
     email = Column(String(100), unique=True)
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## 📌 Step 5: Link Models with Alembic
 
@@ -70,7 +71,7 @@ from models import Base
 target_metadata = Base.metadata
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## 📌 Step 6: Generate and Apply Migrations
 
@@ -90,7 +91,7 @@ alembic upgrade head
 
 This applies the migration and creates the `users` table in `test.db`.
 
----
+--------------------------------------------------------------------------------
 
 ## 📌 Step 7: Modify the Model and Apply Another Migration
 
@@ -119,7 +120,7 @@ alembic revision --autogenerate -m "add created_at column"
 alembic upgrade head
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## 📌 Step 8: Rollback a Migration
 
@@ -137,15 +138,15 @@ alembic downgrade <revision_id>
 
 Find `<revision_id>` in the `alembic/versions/` folder.
 
----
+--------------------------------------------------------------------------------
 
 ## ✅ Summary of Commands
 
-| Command | Description |
-|---------|------------|
-| `alembic init alembic` | Initialize Alembic |
-| `alembic revision --autogenerate -m "message"` | Generate migration |
-| `alembic upgrade head` | Apply migrations |
-| `alembic downgrade -1` | Undo the last migration |
+Command                                        | Description
+---------------------------------------------- | -----------------------
+`alembic init alembic`                         | Initialize Alembic
+`alembic revision --autogenerate -m "message"` | Generate migration
+`alembic upgrade head`                         | Apply migrations
+`alembic downgrade -1`                         | Undo the last migration
 
 This is a **fully working Alembic setup** with SQLite! 🚀
