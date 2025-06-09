@@ -29,7 +29,8 @@ The **trend** component represents the long-term progression of the series. It s
 
 **Example**: A steady rise in housing prices over several years.
 
-```python
+
+```python 
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -45,6 +46,25 @@ plt.grid(True)
 plt.show()
 ```
 
+<!-- ```python exec="on"
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load sample time series data
+url = 'https://raw.githubusercontent.com/jbrownlee/Datasets/master/airline-passengers.csv'
+df = pd.read_csv(url, parse_dates=['Month'], index_col='Month')
+
+# Plot trend
+df['Passengers'].plot(title='Airline Passengers Trend', figsize=(10, 4))
+plt.xlabel('Date')
+plt.ylabel('Number of Passengers')
+plt.grid(True)
+plt.show()
+# Save figure 
+plt.savefig('airline_passengers_trend.png')
+``` -->
+
+![Trend Plot](airline_passengers_trend.png)
 
 ### 2. Seasonality
 
@@ -155,87 +175,12 @@ plt.show()
 ```
 
 ---
-## 📊 Basic Statistics
 
-Basic statistics describe the central tendency and spread of a dataset.
-
-### 1. Mean (Average)
-The **mean** gives the central value of the time series.
-
-\[
-\mu = \frac{1}{n} \sum_{i=1}^{n} x_i
-\]
-
-```python
-import pandas as pd
-
-mean_value = df['Passengers'].mean()
-print(f"Mean: {mean_value}")
-```
-2. Median
-
-The median is the middle value that separates the higher half from the lower half of the data.
-```python
-median_value = df['Passengers'].median()
-print(f"Median: {median_value}")
-```
-3. Variance
-
-Variance measures the average of the squared deviations from the mean.
-σ2=1n∑i=1n(xi−μ)2
-σ2=n1​i=1∑n​(xi​−μ)2
-
-```python
-variance = df['Passengers'].var()
-print(f"Variance: {variance}")
-```
-### 🔄 Covariance and Autocorrelation
-1. Covariance
-
-Covariance measures how two variables change together.
-Cov(X,Y)=1n∑i=1n(xi−xˉ)(yi−yˉ)
-Cov(X,Y)=n1​i=1∑n​(xi​−xˉ)(yi​−yˉ​)
-
-# Covariance between original and lagged series
-```python
-df['lag1'] = df['Passengers'].shift(1)
-cov = df[['Passengers', 'lag1']].cov()
-print(cov)
-```
-2. Autocorrelation
-
-Autocorrelation (or serial correlation) measures the correlation of a time series with a lagged version of itself.
-ρk=Cov(Xt,Xt−k)σ2
-ρk​=σ2Cov(Xt​,Xt−k​)​
-
-# Autocorrelation plot
-```python
-from pandas.plotting import autocorrelation_plot
-autocorrelation_plot(df['Passengers'])
-plt.show()
-```
-## ⏱ Lag and Difference Operations
-
-These operations are often used for preprocessing and making a time series stationary.
-1. Lag
-
-Creates a shifted version of the time series.
-```python
-df['lag1'] = df['Passengers'].shift(1)
-```
-2. Difference
-
-Used to remove trends or seasonality and make the series stationary.
-
-```python
-df['diff1'] = df['Passengers'].diff()
-df['diff1'].dropna().plot(title='First Order Differenced Series')
-plt.show()
-
-```
 Next Sections (optional extensions):
 
 * Measuring Autocorrelation
 * Decomposing Time Series in Python
 * Augmented Dickey-Fuller Test
+* Rolling Windows & Differencing
+
 * Rolling Windows & Differencing
