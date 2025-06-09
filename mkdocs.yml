@@ -98,6 +98,35 @@ nav:
       - Learning_resources/Data Science/Statistics/Adv_Hypothesis_testing.md
       - Learning_resources/Data Science/Statistics/Hypothesis_testing_with_proportions.md
       - Learning_resources/Data Science/Statistics/Non_Parametric_test.md
+    
+    - Time Series:
+      - Learning_resources/Time Series/roadmap.md
+      - Learning_resources/Time Series/fundamentals.md
+      - Learning_resources/Time Series/eda.md
+      - Learning_resources/Time Series/Augmented Dickey-Fuller Test.md
+      - Learning_resources/Time Series/preprocessing.md
+      - Learning_resources/Time Series/fourier_series.md
+      - Learning_resources/Time Series/Classical Time Series models.md
+      - Learning_resources/Time Series/Arima.md
+      - Learning_resources/Time Series/Exponential Smoothing.md
+      - Learning_resources/Time Series/Machine Learning Techniques.md
+      - Learning_resources/Time Series/Deep Learning Techniques.md
+      - Learning_resources/Time Series/Advanced Time Series Concepts.md
+      - Learning_resources/Time Series/Anamoly Detection.md
+
+      
+
+
+
+
+    - Data Visualization:
+      - Learning_resources/Data Science/Data Visualization/Matplotlib.md
+      - Learning_resources/Data Science/Data Visualization/Seaborn.md
+      - Learning_resources/Data Science/Data Visualization/Plotly.md
+      - Learning_resources/Data Science/Data Visualization/Geopandas.md
+      - Learning_resources/Data Science/Data Visualization/Altair.md
+      - Learning_resources/Data Science/Data Visualization/Power BI.md
+      - Learning_resources/Data Science/Data Visualization/Tableau.md
 
     - Mathematics:
       - Calculus:
