@@ -98,6 +98,12 @@ nav:
       - Learning_resources/Data Science/Statistics/Adv_Hypothesis_testing.md
       - Learning_resources/Data Science/Statistics/Hypothesis_testing_with_proportions.md
       - Learning_resources/Data Science/Statistics/Non_Parametric_test.md
+
+    - Natural Language Processing:
+      - Learning_resources/Data Science/NLP/roadmap.md
+      - Learning_resources/Data Science/NLP/Introduction.md
+      - Learning_resources/Data Science/NLP/Traditional NLP models.md
+      - Learning_resources/Data Science/NLP/NLP with Deep Learning.md
     
     - Time Series:
       - Learning_resources/Time Series/roadmap.md
