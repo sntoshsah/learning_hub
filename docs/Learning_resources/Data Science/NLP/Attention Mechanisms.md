@@ -1,9 +1,5 @@
 # **Preprocessing Pipeline for Transformer Models with Attention Mechanisms**
 
-This guide walks through the complete preprocessing steps for Transformer models, from raw text to model-ready tensors, with visual illustrations and PyTorch code examples.
-
----
-
 ## **1. Text Tokenization**
 
 ### **Concept**
@@ -36,15 +32,6 @@ Tokens: ['the', 'cat', 'sat', 'on', 'the', 'mat', '.']
 Token IDs: [1996, 4937, 2038, 2006, 1996, 4812, 1012]
 ```
 
-### **Visualization**
-```
-Raw Text: "The cat sat on the mat."
-           ↓
-Tokens:   ["the", "cat", "sat", "on", "the", "mat", "."]
-           ↓
-Token IDs: [1996, 4937, 2038, 2006, 1996, 4812, 1012]
-```
-
 ---
 
 ## **2. Sequence Padding/Truncation**
@@ -73,10 +60,16 @@ Attention Mask: [1, 1, 1, 1, 1, 1, 1, 0, 0, 0]
 ```
 
 ### **Visualization**
-```
-Before Padding: [1996, 4937, 2038, 2006, 1996, 4812, 1012]
-After Padding:  [1996, 4937, 2038, 2006, 1996, 4812, 1012, 0, 0, 0]
-Attention Mask: [1,   1,    1,    1,    1,    1,    1,    0, 0, 0]
+```mermaid
+graph LR
+    A["Before Padding<br/>[1996, 4937, 2038, 2006, 1996, 4812, 1012]"] -->|Padding to length 10| B["After Padding<br/>[1996, 4937, 2038, 2006, 1996, 4812, 1012, 0, 0, 0]"]
+    B --> C["Attention Mask<br/>[1, 1, 1, 1, 1, 1, 1, 0, 0, 0]"]
+
+    classDef data fill:#f9ffff,stroke:#333,stroke-width:1px;
+    class A,B,C data;
+    style A fill:#0000aa,stroke:#0066cc
+    style B fill:#0000ee,stroke:#009900
+    style C fill:#ff0000,stroke:#cc0000
 ```
 
 ---
@@ -109,13 +102,29 @@ d_model = 512
 pe = positional_encoding(max_length, d_model)
 print("Positional Encoding Shape:", pe.shape)
 ```
-
-### **Visualization**
+**Example:**
 ```
 Token Embeddings: [E1, E2, E3, ..., En]
 Positional Encodings: [PE1, PE2, PE3, ..., PEn]
-           ↓
 Final Input: [E1+PE1, E2+PE2, E3+PE3, ..., En+PEn]
+```
+### **Visualization**
+```mermaid
+graph TD
+    A["Token Embeddings<br/>[E₁, E₂, E₃, ..., Eₙ]"] --> C["Final Input<br/>[E₁+PE₁, E₂+PE₂, E₃+PE₃, ..., Eₙ+PEₙ]"]
+    B["Positional Encodings<br/>[PE₁, PE₂, PE₃, ..., PEₙ]"] --> C
+
+    classDef embeddings fill:#e60,stroke:#0066cc,stroke-width:2px
+    classDef positional fill:#e60,stroke:#f1c232,stroke-width:2px
+    classDef final fill:#e60,stroke:#82b366,stroke-width:2px
+    
+    class A embeddings
+    class B positional
+    class C final
+
+    style A text-align:left
+    style B text-align:left
+    style C text-align:left
 ```
 
 ---
@@ -140,9 +149,10 @@ tensor([[1, 1, 1, 1, 1, 1, 1, 0, 0, 0]])
 ```
 
 ### **Visualization**
-```
-Tokens:      [The, cat, sat, on, the, mat, ., [PAD], [PAD], [PAD]]
-Mask:        [1,   1,   1,   1,   1,   1,  1,   0,     0,     0]
+```mermaid
+graph LR
+    A["Tokens:</br>[The, cat, sat, on, the, mat, ., [PAD], [PAD], [PAD]]"] --> B
+    B["Mask:</br>[1,   1,   1,   1,   1,   1,  1,   0,     0,     0]"]
 ```
 
 ---
@@ -266,24 +276,15 @@ class TransformerBlock(nn.Module):
 
 ## **Visual Summary of Full Pipeline**
 
+```mermaid
+graph TD
+    A[Raw Text] --> B[Tokenization]
+    B --> C[Token IDs + Special Tokens]
+    C --> D[Padding/Truncation]
+    D --> E[Input IDs + Attention Mask + Segment IDs]
+    E --> F[Token Embeddings + Positional Encoding]
+    F --> G[Transformer Encoder Layers]
+    G --> H[Multi-Head Attention]
+    H --> I[Output Representations]
 ```
-Raw Text
-   ↓
-Tokenization (WordPiece/BPE)
-   ↓
-[Token IDs] + [Special Tokens]
-   ↓
-Padding/Truncation
-   ↓
-[Input IDs] + [Attention Mask] + [Segment IDs]
-   ↓
-Token Embeddings + Positional Encoding
-   ↓
-Transformer Encoder Layers
-   ↓
-Multi-Head Attention Calculations
-   ↓
-Output Representations
-```
-
 This complete pipeline shows how text gets transformed into the numerical representations that Transformer models use to compute attention and make predictions.

@@ -104,6 +104,7 @@ nav:
       - Learning_resources/Data Science/NLP/Introduction.md
       - Learning_resources/Data Science/NLP/Traditional NLP models.md
       - Learning_resources/Data Science/NLP/NLP with Deep Learning.md
+      - Learning_resources/Data Science/NLP/Attention Mechanisms.md
     
     - Time Series:
       - Learning_resources/Time Series/roadmap.md
