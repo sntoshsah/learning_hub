@@ -114,19 +114,13 @@ nav:
       - Learning_resources/Time Series/Advanced Time Series Concepts.md
       - Learning_resources/Time Series/Anamoly Detection.md
 
-      
-
-
-
 
     - Data Visualization:
       - Learning_resources/Data Science/Data Visualization/Matplotlib.md
       - Learning_resources/Data Science/Data Visualization/Seaborn.md
       - Learning_resources/Data Science/Data Visualization/Plotly.md
+      - Learning_resources/Data Science/Data Visualization/Plotly-2.md
       - Learning_resources/Data Science/Data Visualization/Geopandas.md
-      - Learning_resources/Data Science/Data Visualization/Altair.md
-      - Learning_resources/Data Science/Data Visualization/Power BI.md
-      - Learning_resources/Data Science/Data Visualization/Tableau.md
 
     - Mathematics:
       - Calculus:
