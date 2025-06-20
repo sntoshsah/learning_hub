@@ -79,6 +79,25 @@ nav:
       - Learning_resources/Python/Constructors.md
       - Learning_resources/Python/Data_Member.md
       
+    - DSA with Python:
+      - Learning_resources/DSA/Introduction.md
+      # - Learning_resources/DSA/Time_and_Space_Complexity.md
+      - Learning_resources/DSA/Stack.md
+      - Learning_resources/DSA/Queue.md
+      - Learning_resources/DSA/Recursion.md
+      - Learning_resources/DSA/Linked_List.md
+      - Learning_resources/DSA/Sorting_Algorithms.md
+      - Learning_resources/DSA/Searching_And_Hashing_Algorithms.md
+      - Learning_resources/DSA/Trees_And_Graphs.md
+      # - Learning_resources/DSA/Trees.md
+      # - Learning_resources/DSA/Binary_Trees.md
+      # - Learning_resources/DSA/Binary_Search_Trees.md
+      # - Learning_resources/DSA/Binary_Heap.md
+      # - Learning_resources/DSA/Huffman_Coding.md
+      - Learning_resources/DSA/Dynamic_Programming.md
+      - Learning_resources/DSA/Greedy_Algorithms.md
+
+
     - Machine Learning Algorithms and Concepts:
       - Learning_resources/Machine Learning/ML_basics.md
       - Learning_resources/Machine Learning/Regression.md
