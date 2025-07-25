@@ -53,7 +53,7 @@ View this documentation site at:
 
 **Santosh Kumar Sah**  
 Data Science & AI Enthusiast  
-📧 [sntoshsah@gmail.com](mailto:sntoshsah@gmail.com)  
+📧 [sahsantosh257@gmail.com](mailto:sahsantosh257@gmail.com)  
 📍 Nepal
 
 ---
