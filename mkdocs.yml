@@ -29,23 +29,13 @@ theme:
     - content.code.tabs         # Enable interactive tabs for code blocks
     - content.code.execute      # Enable interactive Python execution
 
-  # palette:
-  #   - scheme: default
-  #     primary: deep purple
-  #     accent: pink
-  #   - scheme: slate
-  #     primary: deep purple
-  #     accent: pink
-  #     toggle:
-  #       icon: material/toggle-switch
-  #       name: Switch to dark mode
+
   icon:
     repo: fontawesome/brands/github
 repo_url: https://github.com/sntoshsah
 
 nav:
   - Home: index.md
-  # - About Me: about.md
   - Projects:
       - AI Engineer: projects/ai.md
       - Data Science: projects/data_science.md
@@ -165,6 +155,7 @@ nav:
       - Learning_resources/Blog/Docker.md
       - Learning_resources/Blog/Linux_Commands.md
       - Learning_resources/Blog/Alembic.md
+      - Learning_resources/Blog/sigmoid function.md
 
 
   - Contact: contact.md
