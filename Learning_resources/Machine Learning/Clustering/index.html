@@ -1,0 +1,4049 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Santosh Kumar Sah">
+      
+      
+        <link rel="canonical" href="https://mydomain.org/Learning_resources/Machine%20Learning/Clustering/">
+      
+      
+        <link rel="prev" href="../classification/">
+      
+      
+        <link rel="next" href="../../Deep%20Learning/Neural_Network/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
+    
+    
+      
+        <title>Unsupervised Machine Learning Algorithms - Data Science and ML</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/_markdown_exec_pyodide.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unsupervised-machine-learning-algorithms" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Data Science and ML" class="md-header__button md-logo" aria-label="Data Science and ML" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Data Science and ML
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Unsupervised Machine Learning Algorithms
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/sntoshsah" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Data Science and ML" class="md-nav__button md-logo" aria-label="Data Science and ML" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Data Science and ML
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/sntoshsah" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/ai/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AI Engineer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/data_science/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Science
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../projects/ML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Machine Learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Learning Resources
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Learning Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Python Programming Concepts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Python Programming Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Python_Syntax/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Syntax
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Python_Basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Conditions_and_Loops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conditions and Loops
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/strings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Strings and Their Relevant Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/List/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python List - A Comprehensive Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Tuples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Tuple - A Comprehensive Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Sets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Sets - A Comprehensive Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Dict/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Dictionary - A Comprehensive Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Functions - A Comprehensive Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/File_Handling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python File Handling and File I/O
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Exception_Handling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Exception Handling - A Comprehensive Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Methods/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Methods - Static, Class, and Abstract
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Decorators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python First-Class Functions, Closures, and Decorators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Iterator_Generator_Duck_Typing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Generators, Iterators, and Duck Typing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Functions_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Functions-2 - A Comprehensive Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/OOPs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Object-Oriented Programming (OOPs) Concepts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Class/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Understanding Classes in Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Objects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Object in Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Method/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Methods in Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Inheritance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inheritance in Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Polymorphism/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Polymorphism in Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Data_Abstraction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Abstraction in Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Encapsulation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Encapsulation in Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Constructors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Constructors in Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Python/Data_Member/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Member
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DSA with Python
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            DSA with Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DSA/Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Data Structures &amp; Algorithms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DSA/Asymptotic%20Notations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Asymptotic Notations and Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DSA/Stack/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Stack Data Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DSA/Queue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Queue Data Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DSA/Recursion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recursion in Computer Science
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DSA/Linked_List/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lists and Linked Lists in Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DSA/Sorting_Algorithms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sorting Algorithms in Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DSA/Searching_And_Hashing_Algorithms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Searching and Hashing in Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DSA/Trees_And_Graphs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trees and Graphs in Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DSA/Dynamic_Programming/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dynamic Programming: Concepts and Applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DSA/Greedy_Algorithms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Greedy Algorithms: Concepts and Applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Machine Learning Algorithms and Concepts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Machine Learning Algorithms and Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ML_basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Machine Learning: A Beginner's Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Regression/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Regression Analysis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classification/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Classification
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Unsupervised Machine Learning Algorithms
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Unsupervised Machine Learning Algorithms
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unsupervised-learning-objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unsupervised Learning Objective
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-unsupervised-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Unsupervised Algorithms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Unsupervised Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-clustering-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Clustering Algorithms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Clustering Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-k-means-clustering" class="md-nav__link">
+    <span class="md-ellipsis">
+      a. K-Means Clustering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-hierarchical-clustering" class="md-nav__link">
+    <span class="md-ellipsis">
+      b. Hierarchical Clustering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-dbscan-density-based-spatial-clustering-of-applications-with-noise" class="md-nav__link">
+    <span class="md-ellipsis">
+      c. DBSCAN (Density-Based Spatial Clustering of Applications with Noise)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dimensionality-reduction-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Dimensionality Reduction Algorithms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Dimensionality Reduction Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-principal-component-analysis-pca" class="md-nav__link">
+    <span class="md-ellipsis">
+      a. Principal Component Analysis (PCA)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-t-sne-t-distributed-stochastic-neighbor-embedding" class="md-nav__link">
+    <span class="md-ellipsis">
+      b. t-SNE (t-Distributed Stochastic Neighbor Embedding)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-association-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Association Algorithms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Association Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-apriori-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      a. Apriori Algorithm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-fp-growth-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      b. FP-Growth Algorithm
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-anomaly-detection-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Anomaly Detection Algorithms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Anomaly Detection Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-isolation-forest" class="md-nav__link">
+    <span class="md-ellipsis">
+      a. Isolation Forest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-one-class-svm" class="md-nav__link">
+    <span class="md-ellipsis">
+      b. One-Class SVM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-elliptic-envelope" class="md-nav__link">
+    <span class="md-ellipsis">
+      c. Elliptic Envelope
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-metrics-for-unsupervised-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Metrics for Unsupervised Learning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Metrics for Unsupervised Learning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clustering-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clustering Metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anomaly-detection-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anomaly Detection Metrics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Deep Learning
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Deep Learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Deep%20Learning/Neural_Network/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Neural Network
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Deep%20Learning/Backpropagation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backpropagation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Deep%20Learning/Optimizers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Optimizers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Deep%20Learning/CNN/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Convolutional Neural Networks (CNN) - A Detailed Explanation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data Science
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Data Science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Science/Statistics/Intro_to_Statistics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 1: Introduction to Statistics in Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Science/Statistics/probability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 2: Measuring Chance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Science/Statistics/Data_distribution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 3: Data Distribution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Science/Statistics/correlation_and_experiment_design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 4: Correlation and Experiment Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Science/Statistics/Hypothesis_testing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hypothesis Testing in Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Science/Statistics/Adv_Hypothesis_testing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced Hypothesis Testing in Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Science/Statistics/Hypothesis_testing_with_proportions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hypothesis Testing with Proportions and Chi-Square Tests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Science/Statistics/Non_Parametric_test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hypothesis Testing: Non-Parametric
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Natural Language Processing
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Natural Language Processing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Science/NLP/roadmap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Roadmap to Learn NLP &amp; LLMs (Beginner to Advanced)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Science/NLP/Introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Complete NLP Tutorial: Introduction to NLP &amp; Text Preprocessing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Science/NLP/Traditional%20NLP%20models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comprehensive Tutorial on Traditional NLP Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Science/NLP/NLP%20with%20Deep%20Learning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deep Learning for NLP: A Comprehensive Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Science/NLP/Attention%20Mechanisms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Preprocessing Pipeline for Transformer Models with Attention Mechanisms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Time Series
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            Time Series
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Time%20Series/roadmap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Roadmap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Time%20Series/fundamentals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Time Series Analysis: Fundamentals
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Time%20Series/eda/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📊 Exploratory Time Series Analysis (TSA)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Time%20Series/Augmented%20Dickey-Fuller%20Test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ✅ Augmented Dickey-Fuller (ADF) Test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Time%20Series/preprocessing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ⏳ Time Series Preprocessing: Complete Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Time%20Series/fourier_series/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fourier series
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Time%20Series/Classical%20Time%20Series%20models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📘 Classical Time Series Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Time%20Series/Arima/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ARIMA: AutoRegressive Integrated Moving Average
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Time%20Series/Exponential%20Smoothing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📈 Exponential Smoothing (ETS) – Complete Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Time%20Series/Machine%20Learning%20Techniques/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📘 Machine Learning for Time Series Forecasting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Time%20Series/Deep%20Learning%20Techniques/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🔥 Deep Learning for Time Series with PyTorch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Time%20Series/Advanced%20Time%20Series%20Concepts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📊 Advanced Time Series Topics Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Time%20Series/Anamoly%20Detection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Anomaly Detection in Time Series
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_8" id="__nav_3_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data Visualization
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            Data Visualization
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Science/Data%20Visualization/Matplotlib/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Visualization using Matplotlib
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Science/Data%20Visualization/Seaborn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Visualization using Seaborn
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Science/Data%20Visualization/Plotly/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Visualization using Plotly
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Science/Data%20Visualization/Plotly-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Visualization with Plotly: Essential Chart Types Explained
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Science/Data%20Visualization/Geopandas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Geopandas Data Visualization Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9" id="__nav_3_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mathematics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9">
+            <span class="md-nav__icon md-icon"></span>
+            Mathematics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9_1" id="__nav_3_9_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Calculus
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_9_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9_1">
+            <span class="md-nav__icon md-icon"></span>
+            Calculus
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathematics/Calculus/Functions_on_One_Variable/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Calculus: Functions of One Variable
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathematics/Calculus/Limit_And_Continuity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Limits and Continuity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathematics/Calculus/Derivative/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Calculus Concepts: Derivatives
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathematics/Calculus/Application_Of_Derivative/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Applications of Derivatives
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathematics/Calculus/Integration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Calculus Concepts: Integration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathematics/Calculus/Integration%20Techniques/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Integration Techniques
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathematics/Calculus/Application%20of%20antiderivatives/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Applications of Antiderivatives
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathematics/Calculus/Ordinary%20differential%20Equations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ordinary Differential Equations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathematics/Calculus/Infinite%20Sequence%20and%20Series/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Infinite Sequences and Series
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathematics/Calculus/Plane%20and%20Space%20Vectors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Plane and Space Vectors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathematics/Calculus/Partial%20Derivatives%20and%20Multiple%20Integrals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Partial Derivatives and Multiple Integrations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_9_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_9_2" id="__nav_3_9_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linear Algebra
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_9_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_9_2">
+            <span class="md-nav__icon md-icon"></span>
+            Linear Algebra
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathematics/Linear%20Algebra/Linear%20Equations%20in%20Linear%20Algebra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linear Equations in Linear Algebra
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathematics/Linear%20Algebra/Transformations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transformations in Linear Algebra
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathematics/Linear%20Algebra/Matrix%20Algebra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Matrix Algebra
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathematics/Linear%20Algebra/Determinants/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Determinants
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathematics/Linear%20Algebra/Vector%20Spaces/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vector Spaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathematics/Linear%20Algebra/Vector%20Spaces2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vector Spaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathematics/Linear%20Algebra/Vector%20Spaces%20Continued/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vector Spaces Continued
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathematics/Linear%20Algebra/Eigenvalues%20and%20Eigenvectors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Eigenvalues and Eigenvectors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathematics/Linear%20Algebra/Orthogonality%20and%20Least%20Squares/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Orthogonality and Least Squares
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mathematics/Linear%20Algebra/Ring%20and%20Field/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ring and Basic Properties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_10" id="__nav_3_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    DBMS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_10">
+            <span class="md-nav__icon md-icon"></span>
+            DBMS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Science/DBMS/Normalization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database Normalization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Science/DBMS/MySQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MySQL Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Data%20Science/DBMS/POSTGRESQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PostgreSQL: From Installation to Database Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_11" id="__nav_3_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_11">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Blog/Docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Blog/Linux_Commands/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linux System Commands Documentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Blog/Alembic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alembic SQLite Tutorial
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Blog/sigmoid%20function/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sigmoid Function Derivation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unsupervised-learning-objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unsupervised Learning Objective
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applications
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-unsupervised-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Unsupervised Algorithms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Unsupervised Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-clustering-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Clustering Algorithms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Clustering Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-k-means-clustering" class="md-nav__link">
+    <span class="md-ellipsis">
+      a. K-Means Clustering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-hierarchical-clustering" class="md-nav__link">
+    <span class="md-ellipsis">
+      b. Hierarchical Clustering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-dbscan-density-based-spatial-clustering-of-applications-with-noise" class="md-nav__link">
+    <span class="md-ellipsis">
+      c. DBSCAN (Density-Based Spatial Clustering of Applications with Noise)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dimensionality-reduction-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Dimensionality Reduction Algorithms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Dimensionality Reduction Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-principal-component-analysis-pca" class="md-nav__link">
+    <span class="md-ellipsis">
+      a. Principal Component Analysis (PCA)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-t-sne-t-distributed-stochastic-neighbor-embedding" class="md-nav__link">
+    <span class="md-ellipsis">
+      b. t-SNE (t-Distributed Stochastic Neighbor Embedding)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-association-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Association Algorithms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Association Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-apriori-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      a. Apriori Algorithm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-fp-growth-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      b. FP-Growth Algorithm
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-anomaly-detection-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Anomaly Detection Algorithms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Anomaly Detection Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-isolation-forest" class="md-nav__link">
+    <span class="md-ellipsis">
+      a. Isolation Forest
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-one-class-svm" class="md-nav__link">
+    <span class="md-ellipsis">
+      b. One-Class SVM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-elliptic-envelope" class="md-nav__link">
+    <span class="md-ellipsis">
+      c. Elliptic Envelope
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-metrics-for-unsupervised-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Metrics for Unsupervised Learning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Metrics for Unsupervised Learning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clustering-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clustering Metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anomaly-detection-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anomaly Detection Metrics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="unsupervised-machine-learning-algorithms">Unsupervised Machine Learning Algorithms</h1>
+<p>Unsupervised Machine Learning is a type of machine learning where the model learns patterns and structures from unlabeled data. It is primarily used for clustering, dimensionality reduction, association rule mining, and anomaly detection.</p>
+<hr />
+<h2 id="key-concepts">Key Concepts</h2>
+<h3 id="unsupervised-learning-objective">Unsupervised Learning Objective</h3>
+<p>Given data <span class="arithmatex">\( X = \{x_1, x_2, \dots, x_n\} \)</span>, the goal is to learn patterns or structures in the data without explicit output labels.</p>
+<h3 id="applications">Applications</h3>
+<ul>
+<li><strong>Clustering</strong>: Grouping similar data points.</li>
+<li><strong>Dimensionality Reduction</strong>: Simplifying data while retaining key patterns.</li>
+<li><strong>Association Rule Mining</strong>: Discovering relationships between variables.</li>
+<li><strong>Anomaly Detection</strong>: Identifying outliers or abnormal instances.</li>
+</ul>
+<hr />
+<h2 id="types-of-unsupervised-algorithms">Types of Unsupervised Algorithms</h2>
+<h3 id="1-clustering-algorithms">1. Clustering Algorithms</h3>
+<p>Clustering divides data into groups (clusters) based on similarity.</p>
+<h4 id="a-k-means-clustering">a. <strong>K-Means Clustering</strong></h4>
+<p>K-Means partitions data into <span class="arithmatex">\( k \)</span> clusters by minimizing intra-cluster variance.</p>
+<p><strong>Mathematical Formulation</strong>:</p>
+<div class="arithmatex">\[
+\text{Objective: } \min \sum_{i=1}^k \sum_{x \in C_i} ||x - \mu_i||^2
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\( C_i \)</span>: Cluster <span class="arithmatex">\( i \)</span>.</li>
+<li><span class="arithmatex">\( \mu_i \)</span>: Centroid of cluster <span class="arithmatex">\( C_i \)</span>.</li>
+</ul>
+<p><strong>Algorithm</strong>:</p>
+<ol>
+<li>Initialize <span class="arithmatex">\( k \)</span> centroids.</li>
+<li>Assign each point to the nearest centroid.</li>
+<li>Recompute centroids.</li>
+<li>Repeat until convergence.</li>
+</ol>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Customer segmentation.</li>
+<li>Image compression.</li>
+<li>Market segmentation.</li>
+</ul>
+<hr />
+<h4 id="b-hierarchical-clustering">b. <strong>Hierarchical Clustering</strong></h4>
+<p>Builds a tree-like structure of nested clusters.</p>
+<p><strong>Two Approaches</strong>:</p>
+<ul>
+<li><strong>Agglomerative</strong>: Bottom-up merging of clusters.</li>
+<li><strong>Divisive</strong>: Top-down splitting of clusters.</li>
+</ul>
+<p><strong>Linkage Methods</strong>:</p>
+<ul>
+<li>Single Linkage: <span class="arithmatex">\( \min \{d(a, b) : a \in A, b \in B\} \)</span></li>
+<li>Complete Linkage: <span class="arithmatex">\( \max \{d(a, b) : a \in A, b \in B\} \)</span></li>
+<li>Average Linkage: <span class="arithmatex">\( \text{mean} \{d(a, b) : a \in A, b \in B\} \)</span></li>
+</ul>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Gene expression analysis.</li>
+<li>Social network analysis.</li>
+</ul>
+<hr />
+<h4 id="c-dbscan-density-based-spatial-clustering-of-applications-with-noise">c. <strong>DBSCAN (Density-Based Spatial Clustering of Applications with Noise)</strong></h4>
+<p>Groups points based on density and identifies outliers as noise.</p>
+<p><strong>Parameters</strong>:</p>
+<ul>
+<li><span class="arithmatex">\( \epsilon \)</span>: Neighborhood radius.</li>
+<li><span class="arithmatex">\( \text{MinPts} \)</span>: Minimum points to form a dense region.</li>
+</ul>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Geospatial data analysis.</li>
+<li>Noise filtering.</li>
+</ul>
+<hr />
+<h3 id="2-dimensionality-reduction-algorithms">2. Dimensionality Reduction Algorithms</h3>
+<h4 id="a-principal-component-analysis-pca">a. <strong>Principal Component Analysis (PCA)</strong></h4>
+<p>PCA reduces dimensionality by projecting data onto orthogonal axes that maximize variance.</p>
+<p><strong>Mathematical Formulation</strong>:</p>
+<p>Given data matrix <span class="arithmatex">\( X \)</span>, the principal components are the eigenvectors of the covariance matrix <span class="arithmatex">\( \Sigma = \frac{1}{n} X^T X \)</span>.</p>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Data visualization.</li>
+<li>Noise reduction.</li>
+</ul>
+<hr />
+<h4 id="b-t-sne-t-distributed-stochastic-neighbor-embedding">b. <strong>t-SNE (t-Distributed Stochastic Neighbor Embedding)</strong></h4>
+<p>t-SNE maps high-dimensional data to a lower-dimensional space while preserving local structure.</p>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Visualizing high-dimensional datasets.</li>
+<li>Exploring clusters.</li>
+</ul>
+<hr />
+<h3 id="3-association-algorithms">3. Association Algorithms</h3>
+<h4 id="a-apriori-algorithm">a. <strong>Apriori Algorithm</strong></h4>
+<p>Discovers frequent itemsets and association rules in transaction data.</p>
+<p><strong>Steps</strong>:
+1. Identify frequent itemsets using a minimum support threshold.
+2. Generate association rules using a minimum confidence threshold.</p>
+<p><strong>Mathematical Definitions</strong>:</p>
+<ul>
+<li><strong>Support</strong>:
+Proportion of transactions containing an itemset:</li>
+</ul>
+<div class="arithmatex">\[
+\text{Support}(A) = \frac{\text{Transactions with } A}{\text{Total Transactions}}
+\]</div>
+<ul>
+<li><strong>Confidence</strong>: 
+Likelihood of <span class="arithmatex">\( B \)</span> given <span class="arithmatex">\( A \)</span>:</li>
+</ul>
+<div class="arithmatex">\[
+\text{Confidence}(A \rightarrow B) = \frac{\text{Support}(A \cup B)}{\text{Support}(A)}
+\]</div>
+<ul>
+<li><strong>Lift</strong>: 
+Measures the strength of the rule:</li>
+</ul>
+<div class="arithmatex">\[
+\text{Lift}(A \rightarrow B) = \frac{\text{Support}(A \cup B)}{\text{Support}(A) \cdot \text{Support}(B)}
+\]</div>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Market basket analysis.</li>
+<li>Recommender systems.</li>
+</ul>
+<hr />
+<h4 id="b-fp-growth-algorithm">b. <strong>FP-Growth Algorithm</strong></h4>
+<p>Efficiently mines frequent itemsets without candidate generation by using a prefix-tree structure.</p>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Retail analytics.</li>
+<li>Fraud detection.</li>
+</ul>
+<hr />
+<h3 id="4-anomaly-detection-algorithms">4. Anomaly Detection Algorithms</h3>
+<h4 id="a-isolation-forest">a. <strong>Isolation Forest</strong></h4>
+<p>Detects anomalies by isolating instances using a tree structure.</p>
+<p><strong>Key Idea</strong>:</p>
+<p>Anomalies are isolated quickly due to their rarity and differences.</p>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Fraud detection.</li>
+<li>Network intrusion detection.</li>
+</ul>
+<hr />
+<h4 id="b-one-class-svm">b. <strong>One-Class SVM</strong></h4>
+<p>Classifies data into one class, treating outliers as anomalies.</p>
+<p><strong>Mathematical Formulation</strong>:</p>
+<p>Solves:</p>
+<div class="arithmatex">\[
+\min \frac{1}{2} ||w||^2 + \frac{1}{\nu n} \sum \max(0, 1 - (w \cdot x - \rho))
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\( \nu \)</span>: Fraction of anomalies.</li>
+</ul>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Manufacturing defect detection.</li>
+<li>Medical diagnosis.</li>
+</ul>
+<hr />
+<h4 id="c-elliptic-envelope">c. <strong>Elliptic Envelope</strong></h4>
+<p>Fits data to a Gaussian distribution and identifies anomalies based on Mahalanobis distance.</p>
+<p><strong>Use Cases</strong>:</p>
+<ul>
+<li>Financial fraud detection.</li>
+<li>Sensor anomaly detection.</li>
+</ul>
+<hr />
+<h2 id="performance-metrics-for-unsupervised-learning">Performance Metrics for Unsupervised Learning</h2>
+<h3 id="clustering-metrics">Clustering Metrics</h3>
+<p><strong>1. Silhouette Score</strong>:</p>
+<div class="arithmatex">\[
+\text{Silhouette}(i) = \frac{b(i) - a(i)}{\max(a(i), b(i))}
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\( a(i) \)</span>: Average distance within the same cluster.</li>
+<li><span class="arithmatex">\( b(i) \)</span>: Average distance to the nearest cluster.</li>
+</ul>
+<p><strong>2. Davies-Bouldin Index</strong>:</p>
+<div class="arithmatex">\[
+DB = \frac{1}{k} \sum_{i=1}^k \max_{j \neq i} \frac{s_i + s_j}{d(c_i, c_j)}
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\( s_i \)</span>: Cluster dispersion.</li>
+<li><span class="arithmatex">\( d(c_i, c_j) \)</span>: Distance between cluster centroids.</li>
+</ul>
+<p><strong>3. Dunn Index</strong>:</p>
+<div class="arithmatex">\[
+\text{Dunn} = \frac{\min_{i \neq j} \delta(C_i, C_j)}{\max_{1 \leq k \leq k} \Delta(C_k)}
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\( \delta \)</span>: Inter-cluster distance.</li>
+<li><span class="arithmatex">\( \Delta \)</span>: Intra-cluster distance.</li>
+</ul>
+<hr />
+<h3 id="anomaly-detection-metrics">Anomaly Detection Metrics</h3>
+<ol>
+<li><strong>Precision</strong>: Proportion of true anomalies among detected anomalies.</li>
+<li><strong>Recall</strong>: Proportion of true anomalies detected.</li>
+<li><strong>F1-Score</strong>: Harmonic mean of precision and recall.</li>
+<li><strong>Area Under ROC Curve (AUC)</strong>: Measures the trade-off between true positive rate and false positive rate.</li>
+</ol>
+<hr />
+<h2 id="conclusion">Conclusion</h2>
+<p>Unsupervised learning algorithms are powerful tools for exploring data, identifying patterns, and detecting anomalies. Choosing the right algorithm depends on the problem type, data structure, and desired outcome.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.sections", "navigation.tracking", "content.tabs.link", "header.autohide", "content.code.annotate", "content.code.copy", "content.code.tabs", "content.code.execute"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../../assets/_markdown_exec_pyodide.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
