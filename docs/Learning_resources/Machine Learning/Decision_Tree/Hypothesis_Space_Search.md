@@ -35,16 +35,15 @@ ID3 uses:
 ---
 
 ### 2.3 Search Flow (Mermaid)
+
 ```mermaid
 graph TD
-A[Start with Full Dataset] --> B[Evaluate All Attributes]
-    B --> C[Select Best Attribute<br/>(Max Information Gain)]
+    A[Start with Full Dataset] --> B[Evaluate All Attributes]
+    B --> C[Select Best Attribute<br/>Max Information Gain]
     C --> D[Split Dataset into Subsets]
     D --> E{Stopping Condition Met?}
-    
     E -->|No| F[Repeat Recursively on Each Subset]
     F --> B
-    
     E -->|Yes| G[Create Leaf Node]
 ```
 
